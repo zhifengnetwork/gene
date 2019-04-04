@@ -3,6 +3,18 @@ body,div,dl,dt,dd,ul,li,h1,h2,h3,h4,h5,h6,input,form,a,p,textarea{
     margin:0;
     padding:0;
 }
+body{
+	font-size: 0.24rem;
+}
+li{
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
 /*最大边框*/
 .wrap_frame {
 	width: 100%;
