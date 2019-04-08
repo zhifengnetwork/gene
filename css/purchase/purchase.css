@@ -24,6 +24,7 @@ body{
 .purchase_box{
     position: relative;
     width: 100%;
+    padding-bottom:.98rem;
 }
 .purchase_list{
     display: flex;
