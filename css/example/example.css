@@ -59,9 +59,11 @@
 
 
 /*列表项-s*/
-
+.report_list {
+	margin-bottom: 1rem;
+}
 .report_list .list_item {
-	font-size: .16rem;
+	font-size: .28rem;
 	margin-top: .1rem;
 	padding: .2rem 0;
 	border-bottom: .01rem solid #ccc;
