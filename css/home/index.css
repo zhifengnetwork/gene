@@ -1,3 +1,11 @@
+.wrap_index {
+	padding-bottom: .98rem;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	width: 100%;
+	height: auto;
+}
 /* 搜索 */
 .search{
     width: 100%;
