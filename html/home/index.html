@@ -16,10 +16,11 @@
 	<div class="wrap_frame">
         <!-- 搜索 -->
         <div class="search">
-            <div class="search-input">
-                搜索
-            </div>
-            <div class="search-btn">搜索</div>
+            <form action="#">
+                <input class="search-input" type="text" >
+                <button class="search-btn">搜索</button>
+                <span class="search-tip">搜索</span>
+            </form>
         </div>
         <!-- 轮播图 -->
         <div class="swiper-container banner-wrap-zp">
@@ -185,14 +186,33 @@
     <script src="../../js/public/swiper.js"></script>
     <script src="../../js/public/bottom_nav.js"></script>
     <script>
-        var swiper = new Swiper('.banner-wrap-zp', {
-            loop:true,
-            pagination: '.swiper-pagination',
-            paginationClickable: true,
-            spaceBetween: 30,
-            autoplay: 3000,
-            autoplayDisableOnInteraction: false
-        });
+        
+      window.onload = function(){
+            // 首页轮播图
+            var swiper = new Swiper('.banner-wrap-zp', {
+                loop:true,
+                pagination: '.swiper-pagination',
+                paginationClickable: true,
+                spaceBetween: 30,
+                autoplay: 3000,
+                autoplayDisableOnInteraction: false
+            });
+
+            // 搜索框
+            $(".search-input").focus(function(){
+                $(".search-tip").hide();
+            }).blur(function(){
+                var val = $(this).val();
+                if(val != ""){
+                    $(".search-tip").hide();
+                }else{
+                    $(".search-tip").show();
+                }
+            })
+           
+
+
+      }
     </script>
 </body>
 </html>
