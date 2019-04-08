@@ -33,10 +33,10 @@ var buttonNavTitle = [
 var buttonNavUrl = [];
 /*未-登陆路径*/
 var loginFalse = [
-	"'../my.html'",
-	"'../my.html'",
-	"'../my.html'",
-	"'../my.html'",
+	"'../home/index.html'",
+	"'../example/example.html'",
+	"'../purchase/purchase.html'",
+	"'../my/my.html'",
 ]
 /*已-登陆路径*/
 var loginTrue = [
@@ -52,7 +52,7 @@ var loginTrue = [
  * **/
 console.log($('#bottomNavWrap').attr('data-id'),111);
 
-if(Number($('#bottomNavWrap').attr('data-id')) == 2){
+if(Number($('#bottomNavWrap').attr('data-id')) == 0){
 	for(var l=0;l<bottomTabArrOne.length;l++){
 		buttonNavUrl[l] = loginFalse[l]
 	}
