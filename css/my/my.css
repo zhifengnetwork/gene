@@ -64,6 +64,12 @@ li{
 	margin-top: .2rem;
 	
 }
+ul li:last-child{
+	
+	margin-bottom: 1.2rem;
+	
+	
+}
 .img1{
 	
 	width: .4rem;position: absolute;top: 50%;transform: translate(0,-50%);display: inline-block;
