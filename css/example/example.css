@@ -9,7 +9,15 @@
 /*主题图片-s*/
 
 .report .report_theme {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: space-between;
+	-ms-flex-pack: space-between;
+	-webkit-justify-content: space-between;
 	justify-content: space-between;
 }
 
@@ -60,11 +68,10 @@
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	display: flex;
-	justify-content: space-between;
 }
 
 .item_left {
+	float: left;
 	margin-right: .1rem;
 }
 
@@ -76,13 +83,22 @@
 .item_right {}
 
 .item_right .item_title {
+	margin-bottom: .1rem;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: space-between;
+	-ms-flex-pack: space-between;
+	-webkit-justify-content: space-between;
 	justify-content: space-between;
 }
 
 .item_right .item_title .title {
-	font-size: .28rem;
-	margin-bottom: .2rem;
+	font-size: .36rem;
+	font-weight: bold;
 }
 
 .item_right .item_title .detection {
@@ -90,7 +106,6 @@
 }
 
 .item_right .item_title .detection img {
-	display: inline-block;
 	width: .14rem;
 	height: .24rem;
 	margin-left: .1rem;
