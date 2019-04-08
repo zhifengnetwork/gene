@@ -36,6 +36,10 @@
     /*border:1px solid green;*/
     background: url(../../img/my/tupian@2x.png);
     background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    -ms-background-size:cover;
+    -webkit-background-size:cover;
     text-align: center;
     position: relative;
   
@@ -83,6 +87,10 @@ li p{
 	left: .8rem;
 	top: 50%;
 	transform: translate(0,-50%);
+	-o-transform: translate(0,-50%);
+	-moz-transform: translate(0,-50%);
+	-ms-transform: translate(0,-50%);
+	-webkit-transform: translate(0,-50%);
 	display: inline-block;
 	
 }
@@ -93,6 +101,10 @@ li p{
 	position: absolute;
 	top: 50%;
 	transform: translate(0,-50%);
+	-o-transform: translate(0,-50%);
+	-moz-transform: translate(0,-50%);
+	-ms-transform: translate(0,-50%);
+	-webkit-transform: translate(0,-50%);
 	right: .2rem;
 	
 }
