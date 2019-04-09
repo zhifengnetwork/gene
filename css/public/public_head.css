@@ -1,5 +1,6 @@
 /*public head*/
 .lb_headWrap {
+	position: relative;
 	/*position: fixed;
 	top: 0;
 	left: 0;
