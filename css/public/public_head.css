@@ -5,6 +5,7 @@
 	top: 0;
 	left: 0;
 	z-index: 20;*/
+	position: relative;
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -18,19 +19,27 @@
 	background-color: #37afe6;
 }
 
+<<<<<<< HEAD
 /*背景，白色*/
 .lb_headWrap_back_white {
 	background-color: #f8fafb;
 	color: #0d0d0e;
 }
 
+=======
+.lb_headWrap_back_white{
+	background: #f8fafb;
+	color: #0d0d0e;
+}
+>>>>>>> c95bc3fd6f503835a37d42ef63dec9004584cce4
 /*头部 底部线*/
 .lb_headWrap_line {
 	border-bottom: .01rem solid #ccc;
 }
 /*背景，白色*/
 .lb_headWrap_back_white {
-	background-color: #f8fafb;
+	color: #fff;
+	background-color: #37afe6;
 }
 /*返回icon box*/
 .lb_headWrap_return {

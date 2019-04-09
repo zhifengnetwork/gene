@@ -3,7 +3,10 @@
   商品详情
 */
 
-
+.lb_headWrap_back_white{
+    color: #0d0d0e;
+    background-color: #f8fafb;
+  }
 
 .lb_headWrap_return{
     height: .88rem;

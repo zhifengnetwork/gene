@@ -1,6 +1,10 @@
 /* 
   确认订单
 */
+.lb_headWrap_back_white{
+  color: #0d0d0e;
+  background-color: #f8fafb;
+}
 
 .personal-main{
     background:#f5f5f5;
