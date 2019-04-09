@@ -1,5 +1,6 @@
 /*public head*/
 .lb_headWrap {
+	position: relative;
 	/*position: fixed;
 	top: 0;
 	left: 0;
@@ -25,6 +26,10 @@
 /*头部 底部线*/
 .lb_headWrap_line {
 	border-bottom: .01rem solid #ccc;
+}
+/*背景，白色*/
+.lb_headWrap_back_white {
+	background-color: #f8fafb;
 }
 /*返回icon box*/
 .lb_headWrap_return {
