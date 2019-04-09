@@ -3,6 +3,7 @@ $(function(){
     
      //使用余额
     $('.difference').click(function(){
+        // console.log(2321321)
         var acc = $(this)
         if(acc.children().hasClass('active')){
             acc.children().attr('src','../../img/purchase/button@2x.png').removeClass('active');
@@ -12,4 +13,6 @@ $(function(){
             acc.next().hide()
         }
     })
+
+    
 })
