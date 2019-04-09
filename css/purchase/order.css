@@ -107,6 +107,10 @@
     white-space: nowrap;
 }
 
+.product-list .item-price .num{
+    color:#747575;
+}
+
 .product .product-list .item-name .name{
     font-size: .3rem;
     display: block;
@@ -182,12 +186,12 @@
    background: #1c2335;
    color: #FFFFFF;
    border: 0;
-   border-radius: .1rem 0 0 .1rem;
+   border-radius: 0 .1rem .1rem 0;
    line-height: .58rem;
  }
 
  .product-num  .quantity .subtract{
-    border-radius: 0 .1rem .1rem 0;
+    border-radius: .1rem 0 0 .1rem;
  }
 
  /* 配送方式 */
@@ -206,6 +210,11 @@
      display: -webkit-flex;
      justify-content: space-between;
  }
+
+ .personal-main .zfmm{
+  border: 0;
+ }
+
  .personal-main .modq{
     flex-wrap:wrap;
  }
