@@ -1,0 +1,83 @@
+body{background: #eceef3;}
+.layout{
+	margin-bottom: 1.2rem;
+}
+.heredity_info{
+	padding: 0 .2rem;
+}
+.heredity_info .info_title{
+	height: .9rem;
+	line-height: .9rem;
+    font-size: .24rem;
+    letter-spacing: .04rem;
+}
+.heredity_info .info_img{
+	width: 100%;
+	height: 5rem;
+	border-radius: .2rem;
+	overflow: hidden;
+}
+.heredity_info .info_img img{
+	width: 100%;
+	height: 100%;
+}
+.heredity_info .info_content{
+	width: 100%; /* 必须定义宽度 */
+    letter-spacing: .02rem;
+	word-break: break-word; /* 文本行的任意字内断开 */
+	word-wrap: break-word; /* IE */
+	white-space: -moz-pre-wrap; /* Mozilla */
+	white-space: -hp-pre-wrap; /* HP printers */
+	white-space: -o-pre-wrap; /* Opera 7 */
+	white-space: -pre-wrap; /* Opera 4-6 */
+	white-space: pre; /* CSS2 */
+	white-space: pre-wrap; /* CSS 2.1 */
+	white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+}
+/*底部交互*/
+.bottomNav{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 1rem;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding: 0 .2rem;
+	border-top: .01rem solid #d1d3d7;
+	background: #f8fafb;
+}
+.bottomNav_right{
+	float: right;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: space-between;
+	-ms-flex-pack: space-between;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+}
+.bottomNav_right .praise,.bottomNav_right .comment{
+	color: #454545;
+	line-height: 1rem;
+	margin-left: .32rem;
+	letter-spacing: .02rem;
+}
+.bottomNav_right .praise .praise_img,.bottomNav_right .comment .comment_img{
+	float: left;
+	width: .26rem;
+	height: .26rem;	
+}
+.bottomNav_right .praise img,.bottomNav_right .comment img{
+	width:100%;
+	height:100%;
+	vertical-align: text-top;
+}
+.bottomNav_right .praise .text,.bottomNav_right .comment .text{
+	float: left;
+	margin-left: .1rem;
+}
