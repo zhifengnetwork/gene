@@ -18,22 +18,16 @@
 	letter-spacing: .02rem;
 	background-color: #37afe6;
 }
-
 /*头部 底部线*/
 .lb_headWrap_line {
 	border-bottom: .01rem solid #ccc;
-}
-/*背景，白色*/
-.lb_headWrap_back_white {
-	color: #fff;
-	background-color: #37afe6;
 }
 /*返回icon box*/
 .lb_headWrap_return {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: .94rem;
+	width: .6rem;
 	height: 100%;
 }
 .lb_headWrap_return_img {
@@ -43,8 +37,8 @@
 	bottom: 0;
 	left: 0;
 	margin: auto;
-	width: .18rem;
-	height: .3rem;
+	width: .19rem;
+	height: .34rem;
 }
 /*（右box-button）文字*/
 .lb_headWrap_text {

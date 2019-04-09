@@ -7,9 +7,13 @@ $(function(){
         if(acc.children().hasClass('active')){
             acc.children().attr('src','../../img/purchase/button@2x.png').removeClass('active');
             acc.next().show()
+            acc.parent().next().show()
         }else{
             acc.children().attr('src','../../img/purchase/Button-box@2x.png').addClass('active');
             acc.next().hide()
+            acc.parent().next().hide()
         }
     })
+
+    
 })

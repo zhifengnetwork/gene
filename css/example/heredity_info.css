@@ -1,7 +1,5 @@
 body{background: #eceef3;}
-.layout{
-	margin-bottom: 1.2rem;
-}
+
 .heredity_info{
 	padding: 0 .2rem;
 }
@@ -34,49 +32,51 @@ body{background: #eceef3;}
 	white-space: pre-wrap; /* CSS 2.1 */
 	white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
 }
-/*底部交互*/
-.bottomNav{
-	position: fixed;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	height: 1rem;
-	box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	padding: 0 .2rem;
-	border-top: .01rem solid #d1d3d7;
-	background: #f8fafb;
+
+/* 底部点赞、评论盒子 */
+.bottom-bar {
+    width: 100%;
+    height: .98rem;
+    border-top: .02rem solid #d1d3d7;
+    background-color: #fff;
+    font-size: .32rem;
+    display: -webkit-box;/* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+    display: -moz-box; /* Firefox 17- */
+    display: -webkit-flex;/* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */
+    display: -moz-flex;/* Firefox 18+ */
+    display: -ms-flexbox; /* IE 10 */
+    display:flex;/* Chrome 29+, Firefox 22+, IE 11+, Opera 12.1/17/18, Android 4.4+ */
+    align-items: center;
+    justify-content: flex-end;
 }
-.bottomNav_right{
-	float: right;
-	display: -webkit-box;
-	display: -moz-box;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: space-between;
-	-ms-flex-pack: space-between;
-	-webkit-justify-content: space-between;
-	justify-content: space-between;
+
+/* 点赞评论公共样式 */
+.operation-bar .praiseBtn .praise-icon {
+    width: .26rem;
+    height: .26rem;
+    display: inline-block;
+    background: url(../../img/public/praise@2x.png) no-repeat;
+    background-size: 100%;
 }
-.bottomNav_right .praise,.bottomNav_right .comment{
-	color: #454545;
-	line-height: 1rem;
-	margin-left: .32rem;
-	letter-spacing: .02rem;
+
+.operation-bar .commentBtn .discuss-icon {
+    width: .26rem;
+    height: .26rem;
+    display: inline-block;
+    background: url(../../img/public/comments@2x.png) no-repeat;
+    background-size: 100%;
 }
-.bottomNav_right .praise .praise_img,.bottomNav_right .comment .comment_img{
-	float: left;
-	width: .26rem;
-	height: .26rem;	
+
+.operation-bar span {
+    margin-right: .1rem;
+    color: #454545;
+    font-size: .26rem;
+    display: inline-flex;
+    align-items: center;
+    min-width: .9rem;
 }
-.bottomNav_right .praise img,.bottomNav_right .comment img{
-	width:100%;
-	height:100%;
-}
-.bottomNav_right .praise .text,.bottomNav_right .comment .text{
-	float: left;
-	margin-left: .1rem;
+
+.operation-bar span .num {
+    font-style: normal;
+    margin-left: .05rem;
 }
