@@ -107,6 +107,10 @@
     white-space: nowrap;
 }
 
+.product-list .item-price .num{
+    color:#747575;
+}
+
 .product .product-list .item-name .name{
     font-size: .3rem;
     display: block;
