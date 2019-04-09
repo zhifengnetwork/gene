@@ -51,37 +51,14 @@
 /*(循环)商品-项*/
 .commodity_term {
 	margin-bottom: .2rem;
-	width: 100%;
-	height: 3rem;
-	background-color: #fff;
-}
-.commodity_term_top {
-	width: 100%;
-	height: .85rem;
-	letter-spacing: .02rem;
-}
-.commodity_term_top span {
-	display: block;
-	float: left;
+	padding-top: .1rem;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-	height: 100%;
-}
-.commodity_term_top_left {
-	padding-left: .2rem;
-	width: 70%;
-	color: #666;
-	font-size: .26rem;
-	line-height: .85rem;
-	font-style: normal;
-}
-.commodity_term_top_right {
-	padding-right: .2rem;
-	width: 30%;
-	color: #e63737;
-	line-height: .85rem;
-	text-align: right;
+	
+	width: 100%;
+	height: 2.15rem;
+	background-color: #fff;
 }
 .commodity_term_bottom {
 	width: 100%;
@@ -126,6 +103,17 @@
 	display: -webkit-box;
 	-webkit-line-clamp: 3;
 	-webkit-box-orient: vertical;
+}
+.commodity_term_time {
+	float: left;
+	padding-left: .18rem;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	width: 60%;
+	font-size: .2rem;
+	line-height: .2rem;
+	color: #333;
 }
 .commodity_term_but_box {
 	padding: .26rem .2rem 0 0;

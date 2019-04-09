@@ -20,7 +20,7 @@
 					<span>基因查询</span>
 				</div>
 				<!--东方数据-->
-				<div class="data">
+				<div class="data" onclick="alertBox(1)">
 					<div class="img">
 						<img src="../../img/home/east@2x.png" />
 					</div>
@@ -30,7 +30,7 @@
 					</div>
 				</div>
 				<!--世界数据-->
-				<div class="data">
+				<div class="data" onclick="alertBox(2)">
 					<div class="img">
 						<img src="../../img/home/world@2x.png" />
 					</div>
@@ -40,7 +40,7 @@
 					</div>
 				</div>
 				<!--残缺数据-->
-				<div class="data">
+				<div class="data" onclick="alertBox(3)">
 					<div class="img">
 						<img src="../../img/home/imperfect@2x.png" />
 					</div>
@@ -50,7 +50,7 @@
 					</div>
 				</div>
 				<!--中高通量-->
-				<div class="data">
+				<div class="data" onclick="alertBox(4)">
 					<div class="img">
 						<img src="../../img/home/gene@2x.png" />
 					</div>
@@ -60,7 +60,7 @@
 					</div>
 				</div>
 				<!--欧式距离与共祖年代-->
-				<div class="data">
+				<div class="data" onclick="alertBox(5)">
 					<div class="img">
 						<img src="../../img/home/ancestors@2x.png" />
 					</div>
@@ -70,32 +70,36 @@
 					</div>
 				</div>
 				
+			</div>
+			
+			<!--弹框背影-->
+			<div class="back">
 				<!--弹框-->
 				<div class="popup">
-					<p>确认上传东方数据</p>
+					<p class="popup_text">确认上传东方数据</p>
 					<div class="confirm">确定</div>
 				</div>
-				
 			</div>
 		</div>
-		<!--弹框背影-->
-		<div class="back"></div>
+		
 		
 		<script type="text/javascript" src="../../js/public/jquery-1.8.3.js" ></script>
 		<script type="text/javascript" src="../../js/public/public.js" ></script>
 		<script>
-			//弹框
-			//点击确定按钮隐藏
+			/*点击数据显示*/
+			function alertBox(_id){
+				$('.popup').show();
+				$('.back').show();
+				/*text渲染*/
+				$('.popup_text').html(_id);			
+			}
+			
+			/*(弹窗)点击确定按钮隐藏*/
 			$('.confirm').on('click',function(){
 				$('.popup').hide();
 				$('.back').hide();
 			});
-			//点击数据显示
-			$('.data').on('click',function(){
-				$('.popup').show();
-				$('.back').show();
-			});
-			
+						
 		</script>
 	</body>
 </html>
