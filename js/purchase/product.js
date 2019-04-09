@@ -7,12 +7,12 @@ $(function(){
     })
 
     //点击收藏
-    $('.item_img').click(function(){
+    $('.shou').click(function(){
         var acc = $(this)
-        if(acc.children().hasClass('active')){
-            acc.children().attr('src','../../img/purchase/product/collection-r@2x.png').removeClass('active')
+        if(acc.children().children().hasClass('active')){
+            acc.children().children().attr('src','../../img/purchase/product/collection-r@2x.png').removeClass('active')
         }else{
-            acc.children().attr('src','../../img/purchase/product/collection@2x.png').addClass('active')
+            acc.children().children().attr('src','../../img/purchase/product/collection@2x.png').addClass('active')
         }
     })
 })
