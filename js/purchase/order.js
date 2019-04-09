@@ -15,5 +15,21 @@ $(function(){
         }
     })
 
+    //加
+    $('.add').click(function(){
+       var num = $(this).prev().prop('value')
+       var s = parseInt(num)+1
+       if(s == 0){return;}
+       $(this).prev().attr('value',s)
+    })
+
+    //减
+    $('.subtract').click(function(){
+        var num = $(this).next().prop('value')
+        var s = parseInt(num)-1
+        if(s == 0){return;}
+        $(this).next().attr('value',s)
+    })
+
     
 })
