@@ -42,28 +42,30 @@ img {
 #container .cont-wrap .popup {
 	display: none;
 	position: absolute;
-	top: 50%;
-	left: 20%;
+	top: 70%;
+	left: 15%;
 	z-index: 5;
-	width: 60%;
+	width: 70%;
 	height: 2.7rem;
 	background: #F7F7F7;
 	z-index: 1;
+	border-radius: 6px;
 }
 #container .cont-wrap .popup p {
 	margin: .65rem 0 0;
-	font-size: .36rem;
+	font-size: .32rem;
 	text-align: center;
 	line-height: .5rem;
 }
 #container .cont-wrap .popup .confirm {
-	margin: .35rem auto 0;
-	width: 35%;
-	height: .65rem;
+	margin: .55rem auto 0;
+	width: 45%;
+	height: .75rem;
 	background: #37afe6;
 	color: #fff;
 	text-align: center;
-	line-height: .65rem;
+	font-size: .36rem;
+	line-height: .75rem;
 	border-radius: 10px;
 }
 /*弹框背影*/
