@@ -29,7 +29,8 @@
 }
 /*背景，白色*/
 .lb_headWrap_back_white {
-	background-color: #f8fafb;
+	color: #fff;
+	background-color: #37afe6;
 }
 /*返回icon box*/
 .lb_headWrap_return {
