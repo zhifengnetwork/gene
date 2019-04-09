@@ -23,6 +23,7 @@
 }
 /*背景，白色*/
 .lb_headWrap_back_white {
+	color: #0d0d0e;
 	background-color: #f8fafb;
 }
 /*返回icon box*/
@@ -30,7 +31,7 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: .94rem;
+	width: .6rem;
 	height: 100%;
 }
 .lb_headWrap_return_img {
@@ -40,8 +41,8 @@
 	bottom: 0;
 	left: 0;
 	margin: auto;
-	width: .18rem;
-	height: .3rem;
+	width: .19rem;
+	height: .34rem;
 }
 /*（右box-button）文字*/
 .lb_headWrap_text {
