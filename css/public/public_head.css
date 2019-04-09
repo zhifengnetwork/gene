@@ -1,5 +1,6 @@
 /*public head*/
 .lb_headWrap {
+	position: relative;
 	/*position: fixed;
 	top: 0;
 	left: 0;
@@ -16,6 +17,13 @@
 	letter-spacing: .02rem;
 	background-color: #37afe6;
 }
+
+/*背景，白色*/
+.lb_headWrap_back_white {
+	background-color: #f8fafb;
+	color: #0d0d0e;
+}
+
 /*头部 底部线*/
 .lb_headWrap_line {
 	border-bottom: .01rem solid #ccc;
