@@ -1,12 +1,8 @@
 /*public head*/
 .lb_headWrap {
 	position: relative;
-<<<<<<< HEAD
-	/*top: 0;
-=======
 	/*position: fixed;
 	top: 0;
->>>>>>> dd6f93fea3b39e3e29ff3dfb7a85eae1b2302dec
 	left: 0;
 	z-index: 20;*/
 	position: relative;
