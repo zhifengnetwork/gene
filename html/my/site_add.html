@@ -11,6 +11,9 @@
 		<!--头部-->
 		<link rel="stylesheet" href="../../css/public/public_head.css" />
 		<link rel="stylesheet" href="../../css/my/site_add.css" />
+		<!--地区联动-->
+		<link rel="stylesheet" type="text/css" href="../../css/public/region/layout.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/public/region/scs.min.css"/>
 	</head>
 	<body>
 		<div class="layout_wrap">
@@ -32,7 +35,9 @@
 						<label>手机号码</label><input type="number" id="" placeholder="输入手机号码" />
 					</div>
 					<div class="item site">
-						<label>收货地址</label><img src="../../img/example/youjian@2x.png"/>
+						<label>收货地址</label>
+						<input type="text" readonly placeholder="点击选择地区" id="myAddrs" class="publicTROInputMN" name="addr" data-key="" value="" />
+						<img src="../../img/example/youjian@2x.png"/>
 					</div>
 					<div class="item detail">
 						<label>详细地址</label><input type="text" id="" placeholder="具体的街巷单元等" />
@@ -45,8 +50,9 @@
 		</div>
 		<script type="text/javascript" src="../../js/public/public.js"></script>
 		<script src="../../js/public/jquery-1.8.3.js"></script>
-		<script type="text/javascript">
-			
-		</script>
+		<!--地区联动-->
+		<script type="text/javascript" src="../../js/public/region/cnaddrarr.min.js"></script>
+		<script type="text/javascript" src="../../js/public/region/jquery.scs.min.js"></script>
+		<script type="text/javascript" src="../../js/public/region/region.js"></script>
 	</body>
 </html>

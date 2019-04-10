@@ -14,6 +14,7 @@
 	width: 20%;
 }
 .add_list .item input{
+	width: 70%;
 	border: 0;
 	outline: none;
 }
