@@ -35,8 +35,7 @@
 						<label>手机号码</label><input type="number" id="phone" placeholder="输入手机号码" />
 					</div>
 					<div class="item site">
-						<label>收货地址</label>
-						<input type="text" readonly placeholder="点击选择地区" id="myAddrs" class="publicTROInputMN" name="addr" data-key="" value="" />
+						<label>收货地址</label><input type="text" readonly placeholder="点击选择地区" id="myAddrs" class="publicTROInputMN" name="addr" data-key="" value="" />
 						<img src="../../img/example/youjian@2x.png"/>
 					</div>
 					<div class="item detail">
@@ -46,12 +45,23 @@
 				<!--添加信息-e-->
 				<!--设为默认-->
 				<div class="default clearfloat">
-					<div class="default_img">
-						<img src="../../img/purchase/Button-box@2x.png"/>
-					</div>
 					<div class="default_text">
 						设为默认地址
 					</div>
+					<!--开关 Wrap(switchWrapC)、开关Box(switchBoxC)
+						1、wrap的(未开启)样式：switchWrapOneC;
+						2、box的(未开启)样式：switchBoxOneC;
+						3、wrap的(开启后)样式：switchWrapTwoC;
+						4、box的(开启后)样式：switchBoxTwoC;
+					-->
+					<!-- 未-开启 -->
+					<div class="switchWrapC switchWrapOneC">
+						<p class="switchBoxC switchBoxOneC"></p>
+					</div>
+					<!-- 开启 -->
+					<!--<div class="switchWrapTwoC">
+						<p class="switchBoxTwoC"></p>
+					</div>-->
 				</div>
 			</div>
 			<div class="saveBtn">
