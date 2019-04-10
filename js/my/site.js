@@ -1,4 +1,11 @@
-$(function(){
+$(function(){	
+				//input获取焦点
+				$("input").focus(function(){
+				  $(".saveBtn").hide();
+				});
+				$("input").blur(function(){
+				  $(".saveBtn").show();
+				});
 				//设置默认地址
 				$(".default").click(function(){
 					if($(this).hasClass('active')){
