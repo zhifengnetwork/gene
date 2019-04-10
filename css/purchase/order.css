@@ -64,7 +64,7 @@
      padding-top:.5rem;
 }
 
-.personal-list .item-img>img{
+.personal-list .item-img>img,.mode-yhq .usable .goRight{
    width: .2rem;
    height: .3rem;
 }
@@ -234,22 +234,25 @@
  }
  .balance{
   transition: all 2s;
+  width: 80%;
  }
 
  .balance .balance_text,.zfmm .pwdnum{
-  border: 1px solid #515156;
+  /* border: 1px solid #515156; */
   background: #f8fafb;
   outline: none;
   padding: .1rem;
   border-radius: .1rem;
   color: #c7c8cb;
-  width: 2.8rem;
+  width: 70%;
   font-size: .2rem;
+  border: 0;
  }
  
  .zfmm .pwdnum{
     color: #000;
-   }
+    border: 1px solid #515156;
+ }
  
     .pwdnum::-webkit-input-placeholder { /* WebKit browsers */
         color:#c7c8cb
@@ -352,6 +355,7 @@ textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
     display: -ms-flexbox;
     display: flex;
     line-height: .98rem;
+    justify-content: space-between;
  }
  .footer .price_box{
      width: 60%;
