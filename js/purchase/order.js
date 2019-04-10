@@ -50,13 +50,12 @@ $(function(){
         var postage = parseInt($('.postage').html())
         var coupon = parseInt($('.coupon_discount').html())
         var remaining = parseInt($('.balance_text').val().slice(6))    
-        console.log(remaining)
         $(".price").each((i,elem)=>{
             total+=parseInt($(elem).html().slice(1))*parseInt($(elem).next().html().slice(1))
-            
         })
-        $(".price_red").html(`¥${total.toFixed(2)}`)  //应付金额
+        $(".price_red").html(`¥${total.toFixed(2)-postage}`)  //应付金额
         $('#total').html(`${total.toFixed(2)}`)      //订单总和
+        $('.remaining_discount').html(`${remaining.toFixed(2)}`) //余额抵扣
     }
 
     //修改地址
@@ -66,7 +65,7 @@ $(function(){
 
     //点击input输入框时被手机键盘遮挡住解决方法
     $('.remark').focus(function(){
-            $('.footer').hide();  //获得焦点 结算栏隐藏
+            //$('.footer').hide();  //获得焦点 结算栏隐藏
             var u = navigator.userAgent;
             var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
             if(isAndroid){
@@ -75,7 +74,7 @@ $(function(){
             }
     })
     .blur(function(){
-            $('.footer').show();  //失去焦点 结算栏显示
+            //$('.footer').show();  //失去焦点 结算栏显示
             var u = navigator.userAgent; //失去焦点时重新回到原来的状态
             var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
             if(isAndroid){
@@ -83,4 +82,5 @@ $(function(){
             $('.wrap_frame').scrollTop(0)
             }
     })
+
 })
