@@ -22,6 +22,12 @@
 .lb_headWrap_line {
 	border-bottom: .01rem solid #ccc;
 }
+.lb_headWrap_back_white{
+	
+	background-color:#f8fafb;
+	color:#0d0d0e ;
+	
+}
 /*返回icon box*/
 .lb_headWrap_return {
 	position: absolute;

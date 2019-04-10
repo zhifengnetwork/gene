@@ -22,7 +22,7 @@
 	line-height: 1rem;
 	font-size: .3rem;
 	text-align: center;
-	color: white;
+	color: #0d0d0e;
 	background:#37AFE6;
 	
 	
@@ -80,7 +80,7 @@ ul li:last-child{
 	
 	
 }
-li p{
+li a{
 	
 	font-size: .3rem; 
 	position: absolute;
@@ -92,6 +92,7 @@ li p{
 	-ms-transform: translate(0,-50%);
 	-webkit-transform: translate(0,-50%);
 	display: inline-block;
+	color: black;
 	
 }
 .img2{
