@@ -26,7 +26,6 @@ $(function(){
        $sub.prev().attr('value',s)
        //单行数量
        $sub.parent().parent().prev().children(':last-child').children('.num').html(`x${s}`)
-    //    sumPrice($sub.next(),parseInt($('.price').html().slice(1)))
        //调用求和
        sumTotal()
     })
@@ -40,26 +39,48 @@ $(function(){
         $sub.next().attr('value',s)
         //单行数量
         $sub.parent().parent().prev().children(':last-child').children('.num').html(`x${s}`)
-        // sumPrice($sub.next(),parseInt($('.price').html().slice(1)))
         //调用求和
-       sumTotal()
+        sumTotal()
     })
 
     //总价求和函数封装
     function sumTotal(){
-        var total=0;
+        var total=0;  //总和
+        //邮费 优惠 余额
+        var postage = parseInt($('.postage').html())
+        var coupon = parseInt($('.coupon_discount').html())
+        var remaining = parseInt($('.balance_text').val().slice(6))    
+        console.log(remaining)
         $(".price").each((i,elem)=>{
             total+=parseInt($(elem).html().slice(1))*parseInt($(elem).next().html().slice(1))
+            
         })
-        $(".price_red").html(`¥${total.toFixed(2)}`)
+        $(".price_red").html(`¥${total.toFixed(2)}`)  //应付金额
+        $('#total').html(`${total.toFixed(2)}`)      //订单总和
     }
 
-        //单行小计求和函数封装
-    // function sumPrice(numObject,priceObject){
-    //     // var price=priceObject.parent().prev().html().replace(/\s+$|^\s+/g,"").slice(1);
-    //     var price=priceObject
-    //     var num=numObject.attr('value')
-    //     return price*num
-    // }
-    
+    //修改地址
+    $('.item-img').click(function(){
+        $(window).attr('location','/html/my/my_site.html');
+    })
+
+    //点击input输入框时被手机键盘遮挡住解决方法
+    $('.remark').focus(function(){
+            $('.footer').hide();  //获得焦点 结算栏隐藏
+            var u = navigator.userAgent;
+            var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+            if(isAndroid){
+            $('.wrap_frame').height( $('.wrap_frame').height()+200)
+            $('.wrap_frame').scrollTop(200)
+            }
+    })
+    .blur(function(){
+            $('.footer').show();  //失去焦点 结算栏显示
+            var u = navigator.userAgent; //失去焦点时重新回到原来的状态
+            var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+            if(isAndroid){
+            $('.wrap_frame').height( $('.wrap_frame').height()-200)
+            $('.wrap_frame').scrollTop(0)
+            }
+    })
 })
