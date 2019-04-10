@@ -219,16 +219,15 @@
 	   		}   		
 	   		
 	   	})
+
 //	支付方式的选择结束	   	
 	//input标签获取焦点
 	$(".tiqian,.zhifumima").focus(function(){
-		var bodyHeight = document.body.offsetHeight;
-		console.log(bodyHeight)
 		var u = navigator.userAgent;
             var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
             if(isAndroid){
             $('.wrap_frame').height( $('.wrap_frame').height()+200)
-            $('.wrap_frame').scrollTop(200)
+			$('.wrap_frame').scrollTop(200)
 		    }
 	})
 	.blur(function(){  
@@ -241,6 +240,7 @@
 	})
 
 	
+
 	
 	
 	

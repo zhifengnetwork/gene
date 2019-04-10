@@ -2,9 +2,9 @@
 
 $(function(){
       
-    $('.store_buy').click(function(){
-        $(window).attr('location','/html/purchase/order.html');
-    })
+//  $('.store_buy').click(function(){
+//      $(window).attr('location','/html/purchase/order.html');
+//  })
 
     //点击收藏
     $('.shou').click(function(){
