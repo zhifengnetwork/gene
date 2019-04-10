@@ -1,3 +1,12 @@
+/*包裹index的div*/
+.wrap_index {
+	padding-bottom: .98rem;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	width: 100%;
+	height: auto;
+}
 /* 搜索 */
 .search{
     width: 100%;
@@ -110,10 +119,14 @@
     box-sizing: border-box;
     margin-bottom: .2rem;
 }
-.gene-query img{
+
+.gene-query a{
     width: 5.1rem;
-    display: block;
     margin: 0 auto;
+}
+.gene-query img{
+    width: 100%;
+    display: block;
 }
 
 /* 公共标题 */

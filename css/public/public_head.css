@@ -1,9 +1,15 @@
 /*public head*/
 .lb_headWrap {
 	position: relative;
+<<<<<<< HEAD
 	/*top: 0;
+=======
+	/*position: fixed;
+	top: 0;
+>>>>>>> dd6f93fea3b39e3e29ff3dfb7a85eae1b2302dec
 	left: 0;
 	z-index: 20;*/
+	position: relative;
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -15,7 +21,7 @@
 	color: #fefefe;
 	letter-spacing: .02rem;
 	background-color: #37afe6;
-}
+} 
 /*头部 底部线*/
 .lb_headWrap_line {
 	border-bottom: .01rem solid #ccc;
@@ -31,7 +37,7 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: .94rem;
+	width: .6rem;
 	height: 100%;
 }
 .lb_headWrap_return_img {
@@ -41,8 +47,8 @@
 	bottom: 0;
 	left: 0;
 	margin: auto;
-	width: .18rem;
-	height: .3rem;
+	width: .19rem;
+	height: .34rem;
 }
 /*（右box-button）文字*/
 .lb_headWrap_text {
