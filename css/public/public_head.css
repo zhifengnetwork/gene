@@ -1,8 +1,12 @@
 /*public head*/
 .lb_headWrap {
 	position: relative;
+<<<<<<< HEAD
+	/*top: 0;
+=======
 	/*position: fixed;
 	top: 0;
+>>>>>>> dd6f93fea3b39e3e29ff3dfb7a85eae1b2302dec
 	left: 0;
 	z-index: 20;*/
 	position: relative;
@@ -21,6 +25,12 @@
 /*头部 底部线*/
 .lb_headWrap_line {
 	border-bottom: .01rem solid #ccc;
+}
+.lb_headWrap_back_white{
+	
+	background-color:#f8fafb;
+	color:#0d0d0e ;
+	
 }
 /*返回icon box*/
 .lb_headWrap_return {
