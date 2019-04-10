@@ -34,14 +34,14 @@
 						<!--<p>可提现金额</p>-->
 						可提现金额
 					</div>
-					<p class="text_right">
+					<!--<p class="text_right">
 						当日额度：<span>6000</span>
-					</p>
+					</p>-->
 					
 				</div>
 				
 				<p class="tixian_money">	
-					<span>￥</span>30000		
+					<span>￥</span><span class="zi_money">30000</span>		
 				</p>
 				
 				
@@ -87,7 +87,7 @@
 			<!--提现金额-->
 		   <div class="tixianjinger">
 		   	
-		   	 <div class="section1">提现金额(单次可提最大金额:2000)</div>
+		   	 <div class="section1">提现金额(单次可提最大金额:<span class="erdu">2000000</span>)</div>
 		   	 <div class="section2">
 		   	 	
 		   	 	￥<input type="number" placeholder="请输入提现金额" class="tiqian"/>
@@ -95,7 +95,7 @@
 		   	 </div>
 		   	 <div class="section3">
 		   	 	<span>手续费：00.00</span>
-		   	 	<span style="float: right;color: #FF3B3B;">全部提现</span>
+		   	 	<span style="float: right;color: #FF3B3B;" class="tixian_button">全部提现</span>
 		   	 	
 		   	 </div>
 		   	 
@@ -110,7 +110,7 @@
        
            
            <!--支付密码-->
-           <div class="mima">
+           <!--<div class="mima">
            	
            	<div class="mimadiv">
            	<span>支付密码：</span><input type="text" placeholder="请填写支付密码" class="zhifumima"/>
@@ -119,7 +119,7 @@
            	<div class="tip"><p style="float: right;color: #FF3B3B;">前往设置或修改交易密码</p></div>
            
            	
-           </div>
+           </div>-->
        
        
        
@@ -222,20 +222,15 @@
 
 //	支付方式的选择结束	   	
 	//input标签获取焦点
-	$(".tiqian").focus(function(){
+	$(".tiqian,.zhifumima").focus(function(){
 		var u = navigator.userAgent;
             var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
             if(isAndroid){
             $('.wrap_frame').height( $('.wrap_frame').height()+200)
-            $('.wrap_frame').scrollTop(200)
-        }
-		
-		//alert($(".tiqian").position().top)
-		//window.scrollTo(0,$(".tiqian").position().top)
-        
-		
+			$('.wrap_frame').scrollTop(200)
+		    }
 	})
-	.blur(function(){
+	.blur(function(){  
 		var u = navigator.userAgent; //失去焦点时重新回到原来的状态
             var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
             if(isAndroid){
@@ -244,19 +239,31 @@
             }
 	})
 	
-	$(".zhifumima").focus(function(){
-		console.log(document.activeElement.getBoundingClientRect().top)
-		setTimeout(function () {
-            var top = document.activeElement.getBoundingClientRect().top;
-            window.scrollTo(0,top);
-        }, 0);
-		// alert($(".zhifumima").position().top)
-		window.scrollTo(0,$(".zhifumima").position().top)
-		 var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-		//  alert(scrollTop)
+	$('.tixian_button').click(function(){
+		 
+		
+		 
+		 var num=$('.zi_money').html(); 
+		 var text=Number(num); 
+		 var num1=$('.erdu').html(); 
+		 var text1=Number(num1);	 
+		 if(text>text1){
+		 	
+		 	alert("单次可提最大金额"+$('.erdu').html())
+		 	$('.tiqian').val($('.erdu').html())
+		 	
+		 }else{
+		 	
+		 	$('.tiqian').val($('.zi_money').html())
+		 	
+		 	
+		 }
+		 
 		
 		
-	})
+		
+	});
+
 	
 
 	

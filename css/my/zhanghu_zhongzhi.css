@@ -54,14 +54,16 @@
 	
 
 }
-.jinger a{
+.jinger_span{
 	
+	display: inline-block;
 	width: 1.5rem;
 	text-align: center;
 	border: 1px solid #E1E1E1;
 	border-radius: .1rem;
 	height: .6rem;
 	line-height: .6rem;
+	
 	
 	
 	
@@ -82,9 +84,11 @@
 	
 	
 }
-.jinger a:active{
+
+.select{
 	
-	background: #ccc;
+	color: #37AFE6;
+	border: 1px solid #37AFE6;
 	
 	
 }
