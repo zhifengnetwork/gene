@@ -222,20 +222,15 @@
 
 //	支付方式的选择结束	   	
 	//input标签获取焦点
-	$(".tiqian").focus(function(){
+	$(".tiqian,.zhifumima").focus(function(){
 		var u = navigator.userAgent;
             var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
             if(isAndroid){
             $('.wrap_frame').height( $('.wrap_frame').height()+200)
-            $('.wrap_frame').scrollTop(200)
-        }
-		
-		//alert($(".tiqian").position().top)
-		//window.scrollTo(0,$(".tiqian").position().top)
-        
-		
+			$('.wrap_frame').scrollTop(200)
+		    }
 	})
-	.blur(function(){
+	.blur(function(){  
 		var u = navigator.userAgent; //失去焦点时重新回到原来的状态
             var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
             if(isAndroid){
@@ -243,20 +238,7 @@
             $('.wrap_frame').scrollTop(0)
             }
 	})
-	
-	$(".zhifumima").focus(function(){
-		console.log(document.activeElement.getBoundingClientRect().top)
-		setTimeout(function () {
-            var top = document.activeElement.getBoundingClientRect().top;
-            window.scrollTo(0,top);
-        }, 0);
-		// alert($(".zhifumima").position().top)
-		window.scrollTo(0,$(".zhifumima").position().top)
-		 var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-		//  alert(scrollTop)
-		
-		
-	})
+
 	
 
 	

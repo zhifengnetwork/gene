@@ -1,12 +1,19 @@
-$(function(){
+$(function(){	
+				//input获取焦点
+				$("input").focus(function(){
+				  $(".saveBtn").hide();
+				});
+				$("input").blur(function(){
+				  $(".saveBtn").show();
+				});
 				//设置默认地址
 				$(".default").click(function(){
 					if($(this).hasClass('active')){
 						$(this).removeClass('active')						
-						$(this).find('img').attr('src','../../img/home/Button-box@2x.png');
+						$(this).find('img').attr('src','../../img/purchase/Button-box@2x.png');
 					}else{
 						$(this).addClass('active');
-						$(this).find('img').attr('src','../../img/home/button@2x.png');
+						$(this).find('img').attr('src','../../img/purchase/button@2x.png');
 					}
 				})
 				//点击保存按钮获取页面数据
