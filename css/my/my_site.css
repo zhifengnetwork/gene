@@ -23,6 +23,10 @@
 .list_item .btn .btn_right .edit{
 	color: #333;
 }
+.list_item .btn .btn_right .edit a{
+	display: inline-block;
+	color: #333;
+}
 .list_item .btn .btn_right .del{
 	margin:0 .2rem;
 	color: #eb2121;
