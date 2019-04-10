@@ -1,3 +1,4 @@
+body{background: #fff !important;}
 .add_list{
 	padding: 0 .2rem;
 	line-height: .8rem;
@@ -29,6 +30,23 @@
 	margin: auto;
 	width: .14rem;
 	height: .24rem;
+}
+.default{
+	margin: .1rem 0;
+	padding: 0 .2rem;
+}
+.default .default_img{
+	float: left;
+	width: .22rem;
+	height: .22rem;
+	margin-right: .2rem;
+}
+.default .default_img img{
+	width: 100%;
+	height: 100%;
+}
+.default .default_text{
+	float: left;
 }
 .saveBtn{
 	position: fixed;
