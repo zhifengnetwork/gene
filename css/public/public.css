@@ -45,6 +45,12 @@ input[type=button], input[type=submit], input[type=file], button {
 	zoom: 1;
 }
 
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
 /*public 省略号*/
 .publicEllipsis {
 	overflow: hidden;
