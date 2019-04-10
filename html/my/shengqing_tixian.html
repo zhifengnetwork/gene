@@ -87,7 +87,7 @@
 			<!--提现金额-->
 		   <div class="tixianjinger">
 		   	
-		   	 <div class="section1">提现金额(单次可提最大金额:<span class="erdu">200000000</span>)</div>
+		   	 <div class="section1">提现金额(单次可提最大金额:<span class="erdu">2000000</span>)</div>
 		   	 <div class="section2">
 		   	 	
 		   	 	￥<input type="number" placeholder="请输入提现金额" class="tiqian"/>
@@ -249,7 +249,8 @@
 		 var text1=Number(num1);	 
 		 if(text>text1){
 		 	
-		 	alert("单次可提最大金额"+$('.erdu').html()) 	
+		 	alert("单次可提最大金额"+$('.erdu').html())
+		 	$('.tiqian').val($('.erdu').html())
 		 	
 		 }else{
 		 	
