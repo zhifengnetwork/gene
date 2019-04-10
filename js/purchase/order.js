@@ -59,9 +59,9 @@ $(function(){
     }
 
     //修改地址
-    $('.item-img').click(function(){
-        $(window).attr('location','/html/my/my_site.html');
-    })
+//  $('.item-img').click(function(){
+//      $(window).attr('location','/html/my/my_site.html');
+//  })
 
     //点击input输入框时被手机键盘遮挡住解决方法
     $('.remark').focus(function(){
