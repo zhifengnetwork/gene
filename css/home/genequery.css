@@ -114,28 +114,5 @@
 	line-height: .75rem;
 	border-radius: 10px;
 }
-/*基因关系样式*/
-#wrapper .inner .ckg {
-	width: 100%;
-}
-#wrapper .inner .smallicon {
-	padding: 0 0 0 .2rem;
-	margin: .64rem 0 0;
-	width: .64rem;
-	color: #151515;
-}
-#wrapper .inner .text {
-	padding: 0 .25rem;
-}
-#wrapper .inner .text h2 {
-	font-size: .34rem;
-	font-weight: 750;
-	line-height: .95rem;
-	letter-spacing: 1px;
-}
-#wrapper .inner .text p {
-	margin-bottom: .28rem;
-	font-size: .24rem;
-	line-height: .4rem;
-}
+
 
