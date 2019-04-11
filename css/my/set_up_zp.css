@@ -165,13 +165,11 @@
 	height: .8rem;
 	line-height: .8rem;
 	font-size: .28rem;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
 	border-bottom: .01rem solid #d9d9d9;
 	padding: 0 .1rem;
 	box-sizing: border-box;
 }
+
 .reviseSex .sex label:last-child{
 	border-bottom:none;
 }
@@ -182,14 +180,15 @@
 	background-size: 100%;
     appearance: none;
     -webkit-appearance: none;
-    outline: none;
+	outline: none;
+	border:none;
     margin-right: .1rem;
-    vertical-align: sub;
-    display: inline-block;
-    cursor: pointer;
+	display:block;
+	margin: .27rem auto;
 }
-.reviseSex .sex input[type="radio"]:checked:after {
-    width: .26rem;
+
+.reviseSex .sex input.checked{
+	width: .26rem;
     height: .26rem;
     content: '';
     background: url(../../img/my/xuanzhong@2x@2x.png) no-repeat;
@@ -225,8 +224,13 @@
 	width:100%;
 }
 .revisePhone .telephone .phoneNum{
+	width: 100%;
+	height: .4rem;
+	line-height: .4rem;
+	font-size: .28rem;
 	border: none;
 	outline: none;
+	background: none;
 }
 .revisePhone .telephone .newphoneNum{
 	border: none;
@@ -252,14 +256,13 @@
 .revisePhone .verification .cont-wrap .codeNum{
 	width: 2rem;
 	line-height: .58rem;
-	float: left;
+	font-size: .24rem;
 	display: inline-block;
 	border: none;
 	outline: none;
 	background:none;
 }
 .revisePhone .verification .cont-wrap .codeBtn{
-	float: right;
 	text-align: center;
     height: .42rem;
     line-height: .42rem;
@@ -270,6 +273,4 @@
 	display: inline-block;
 	margin: .08rem auto;
 }
-.revisePhone .reviseBtn{
-	display: none;
-}
+
