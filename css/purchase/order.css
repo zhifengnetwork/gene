@@ -278,11 +278,12 @@
 /* 优惠券 */
 .mode-yhq .discount,.mode-bz .bz{
     width: 80%;
-    padding-top: .18rem;
+    /* padding-top: .18rem; */
 }
 
 .mode-yhq .yhqq{
-    width: 20%;
+    display: inline-block;
+    /* width: 20%; */
     background: #f64242;
     padding: .08rem;
     height: .27rem;

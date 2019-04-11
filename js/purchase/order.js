@@ -50,11 +50,13 @@ $(function(){
         //邮费 优惠 余额
         var postage = parseInt($('.postage').html())
         var coupon = parseInt($('.coupon_discount').html())
+        console.log(coupon)
         var remaining = parseInt($('.balance_text').val().slice(6))    
         $(".price").each((i,elem)=>{
             total+=parseInt($(elem).html().slice(1))*parseInt($(elem).next().html().slice(1))
         })
-        $(".price_red").html(`¥${total.toFixed(2)-postage}`)  //应付金额
+        $(".price_red").html(`¥${total.toFixed(2)-postage-coupon}`)  //应付金额
+        console.log(total.toFixed(2)-postage-coupon)
         $('#total').html(`${total.toFixed(2)}`)      //订单总和
         $('.remaining_discount').html(`${remaining.toFixed(2)}`) //余额抵扣
     }
@@ -125,12 +127,18 @@ $(function(){
         });
         /*恢复当前用户滚动的位置！*/
         $(document).scrollTop(thisScrollNum);
-		$("receive_coupon,body").unbind("touchmove");
+        $("receive_coupon,body").unbind("touchmove");   
+        //调用总和
+        sumTotal()
     }
 
     //使用优惠券
     $('.use').click(function(){
          var employ = $(this)
+         var html = employ.parent().prev().find('.original').html()
+         var pri = employ.parent().prev().find('.price').html()
+         $('.man').show().find('.discount_num').html(html)
+         $('.coupon_discount').html(pri)
          var img = `<img src="../../img/purchase/logo@2x.png" alt="" class="been">`
          if(employ.parent().hasClass('coupon_use')){
          employ.parent().addClass('employ').removeClass('coupon_use')
@@ -141,7 +149,7 @@ $(function(){
          }
          ,1000,function(){
             $('.popup').hide()
-         }) 
+         })
          }
     })
 
