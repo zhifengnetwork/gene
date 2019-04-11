@@ -17,6 +17,7 @@
 		
 	<div class="wrap_frame">
 			<!--public head-->
+			<div class="sec">
 			<div class="lb_headWrap lb_headWrap_bacColor topBox_backgroundColor ">
 				<p class="lb_headWrap_return" data-num="1" onclick="returnFun()">
 					<img class="lb_headWrap_return_img" src="../../img/public/back@2x.png"/>
@@ -127,7 +128,7 @@
          	提交申请
          </div>
 	
-		
+		</div>
 		
 		
 	</div>	
@@ -222,13 +223,15 @@
 
 //	支付方式的选择结束	   	
 	//input标签获取焦点
+	
 	$(".tiqian,.zhifumima").focus(function(){
 		var u = navigator.userAgent;
             var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
             if(isAndroid){
             $('.wrap_frame').height( $('.wrap_frame').height()+200)
-			$('.wrap_frame').scrollTop(200)
-		    }
+			$('.wrap_frame').scrollTop(100)
+			// console.log($('.wrap_frame').scrollTop())
+			}
 	})
 	.blur(function(){  
 		var u = navigator.userAgent; //失去焦点时重新回到原来的状态
