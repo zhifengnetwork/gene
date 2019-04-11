@@ -64,15 +64,39 @@
 .product_item .info {
 	overflow: hidden;
 	text-overflow: ellipsis;
-	display: -webkit-box;
+	/* display: -webkit-box;
 	-webkit-line-clamp: 4;
 	-webkit-box-orient: vertical;
-	color: #0d0d0e;
+    color: #0d0d0e; */
+     height: 1.1rem;
+     line-height: .36rem;
+     position: relative;
+}
+.product_item .info_2::after {
+    content: '...';
+    text-align: right;
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    width: 100%;
+    height: 1.8em;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
+ }
+    .drop-down>img{
+        width: .34rem;
+       height: .34rem;
 }
 
 .product_item * {
 	margin-bottom: .2rem
 }
+.drop-down{
+    text-align: center;
+    /* background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgb(245, 241, 241) 50%);
+    background-color: #fff;
+    opacity: 1; */
+}
+
 
 .volume {
 	display: flex;
@@ -91,7 +115,6 @@
 
 
 /* 详情报告 */
-<<<<<<< HEAD
 .particulars_box{
     position: relative;
     background: #ffffff;
@@ -335,82 +358,3 @@
         right: 0;
         bottom: 0;
     }
-=======
-
-.particulars_box {
-	position: relative;
-	background: #ffffff;
-	width: 100%;
-	margin-top: .1rem;
-}
-
-.particulars_box .particulars_item {
-	padding: 0 .19rem .38rem .19rem;
-	-moz-box-sizing: content-box;
-	-webkit-box-sizing: content-box;
-	-o-box-sizing: content-box;
-	-ms-box-sizing: content-box;
-	box-sizing: content-box;
-}
-
-.particulars_box .title {
-	font-size: .4rem;
-	padding-top: .38rem;
-}
-
-.particulars_item .item_img {
-	height: 3.24rem;
-	width: 100%;
-}
-
-
-/* 底部 */
-
-.store {
-	height: 1rem;
-	width: 100%;
-	position: fixed;
-	bottom: 0;
-	background: #fff;
-	border-top: 1px solid #b0b0b0;
-	box-sizing: border-box;
-	z-index: 3;
-}
-
-.footer {
-	display: -webkit-box;
-	display: -moz-box;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flexbox;
-	display: flex;
-}
-
-.store .store_item {
-	width: 25%;
-	display: block;
-	/* padding-left:  */
-	text-align: center;
-	padding-top: .1rem;
-	padding-bottom: .1rem;
-}
-
-.store_item .item_name {
-	color: #808081;
-	line-height: .2rem;
-}
-
-.store_item .item_img>img {
-	width: .5rem;
-	height: .5rem;
-}
-
-.store_buy {
-	width: 50%;
-	background: #37afe6;
-	font-size: .4rem;
-	text-align: center;
-	color: #fff;
-	line-height: 1rem;
-}
->>>>>>> 83a480c3e3fbe91f2f698a8dfe2f3ad16e5d3ac5

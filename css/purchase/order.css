@@ -231,6 +231,7 @@
  .mode .select>img{
      width: .31rem;
      height: .31rem;
+     vertical-align: sub;
  }
  .balance{
   transition: all 2s;
@@ -278,9 +279,13 @@
 /* 优惠券 */
 .mode-yhq .discount,.mode-bz .bz{
     width: 80%;
-    /* padding-top: .18rem; */
+    padding-top: .18rem;
+    position: relative;
 }
-
+.mode-yhq .numm{
+      position: absolute;
+      left: 0;
+ }
 .mode-yhq .yhqq{
     display: inline-block;
     /* width: 20%; */
@@ -290,6 +295,12 @@
     line-height: .27rem;
     text-align: center;
     color: #FFFFFF;
+   
+}
+
+.mode-yhq .man{
+    position: absolute;
+    right: 0;
 }
 
 .personal-main .mode-bz{

@@ -71,4 +71,20 @@ $(function(){
          }) 
          }
     })
+    
+    //info
+    $('.drop').click(function(){
+         var $img = $(this)
+         if($img.find('.drop-down').children().hasClass('active')){
+            $img.find('.drop-down').children().attr("src",'../../img/purchase/xia.png').removeClass('active')
+            $img.find('.info').css({
+                'height':'',
+            }).addClass('info_2')
+         }else{
+            $img.find('.drop-down').children().attr("src",'../../img/purchase/shang.png').addClass('active')
+            $img.find('.info').css({
+                'height':'100%',
+            }).removeClass('info_2')
+         }
+    }) 
 })

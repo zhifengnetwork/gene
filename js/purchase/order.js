@@ -2,7 +2,8 @@
 $(function(){
      //页面加载调用函数求总价
      sumTotal()
-
+     
+     $('.discount_num').html($('.coupon_list').length)
      //使用余额
     $('.difference').click(function(){
         // console.log(12312)
@@ -50,13 +51,11 @@ $(function(){
         //邮费 优惠 余额
         var postage = parseInt($('.postage').html())
         var coupon = parseInt($('.coupon_discount').html())
-        console.log(coupon)
         var remaining = parseInt($('.balance_text').val().slice(6))    
         $(".price").each((i,elem)=>{
             total+=parseInt($(elem).html().slice(1))*parseInt($(elem).next().html().slice(1))
         })
         $(".price_red").html(`¥${total.toFixed(2)-postage-coupon}`)  //应付金额
-        console.log(total.toFixed(2)-postage-coupon)
         $('#total').html(`${total.toFixed(2)}`)      //订单总和
         $('.remaining_discount').html(`${remaining.toFixed(2)}`) //余额抵扣
     }
@@ -135,15 +134,23 @@ $(function(){
     //使用优惠券
     $('.use').click(function(){
          var employ = $(this)
-         var html = employ.parent().prev().find('.original').html()
+         var length = $('.coupon_list').length  //优惠券长度
+         var lengthh = $('.coupon_list').children('.employ').length  //使用优惠券的长度
+         var html = employ.parent().prev().find('.original').html()  
          var pri = employ.parent().prev().find('.price').html()
          $('.man').show().find('.discount_num').html(html)
          $('.coupon_discount').html(pri)
          var img = `<img src="../../img/purchase/logo@2x.png" alt="" class="been">`
+         if(lengthh>=1){  //使用优惠券的长度大于或等于一
+            alert("只能使用一张优惠卷哦~")
+            return
+        }
          if(employ.parent().hasClass('coupon_use')){
          employ.parent().addClass('employ').removeClass('coupon_use')
          employ.parent().append(img)
-         $('.popup').show()
+         length--;   //优惠券长度-1
+         $('.numm').find('.discount_num').html(length)
+         $('.popup').show()  //使用成功
          $('.popup').animate({
              opactiy:1
          }
