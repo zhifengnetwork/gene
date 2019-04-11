@@ -45,7 +45,7 @@
 					<a href="#">
 						<div class="fl"><span>性别</span></div>
 						<div class="fr">
-							<span>保密</span>
+							<span id="sexVal">保密</span>
 							<img src="../../img/my/youjian2@2x.png" />
 						</div>
 					</a>
@@ -54,7 +54,7 @@
 					<a href="#">
 						<div class="fl"><span>手机</span></div>
 						<div class="fr">
-							<span>17875592622</span>
+							<span id="phoneVal">17875592622</span>
 							<img src="../../img/my/youjian2@2x.png" />
 						</div>
 					</a>
@@ -81,82 +81,62 @@
 
 			<!-- 修改性别 -->
 			<div class="reviseSex">
-				男、女
+				<div class="popup-header">
+					<h3>性别</h3>
+					<span class="closeBtn"><img src="../../img/public/closeBtn.png"/></span>
+				</div>
+				<div class="popup-content">
+					<div class="sex">
+						<label>
+							<span>男</span>
+							<input type="radio" name="sex" value="1">
+						</label>
+						<label>
+							<span>女</span>
+							<input type="radio" name="sex" value="2">
+						</label>
+						<label>
+							<span>保密</span>
+							<input type="radio" checked="" name="sex" value="0">
+						</label>
+					</div>
+				</div>
 			</div>
 
 			<!-- 修改手机号码 -->
 			<div class="revisePhone">
-				手机号码
+				<div class="popup-header">
+					<h3>修改绑定手机号码</h3>
+					<span class="closeBtn"><img src="../../img/public/closeBtn.png"/></span>
+				</div>
+				<div class="popup-content">
+					<div class="telephone">
+						<i class="telephone-icon"></i>
+						<input type="text" class="phoneNum" value="17875592622" readonly>
+						<input type="text" class="newphoneNum" placeholder="请输入新号码">
+					</div>
+					<div class="verification">
+						<span class="v-til">验证码：</span>
+						<div class="cont-wrap">
+							<input type="text" class="codeNum" placeholder="请输入验证码">
+							<button class="codeBtn">获取验证码</button>
+						</div>
+					</div>
+				</div>
+				<div class="popup-btn">
+					<button class="nextBtn" >下一步</button>
+					<button class="reviseBtn">确认修改</button>
+				</div>
 			</div>
 
 		</div>
 
-	</div> <a id="asubmit" style="display:none;" href="javascript:;"
-		onclick="javascript:$('#head_pic').submit();">保存头像</a>
+	</div>
 	<script src="../../js/public/jquery-1.8.3.js"></script>
 	<script src="../../js/public/public.js"></script>
+	<script src="../../js/my/set_up_zp.js"></script>
 
-	<script>
-		/*
-		* 上传头像
-		*/
-		$("#selectAvatar").change(function (e) {
-			for (var i = 0; i < e.target.files.length; i++) {
-				var file = e.target.files.item(i);
-				//验证是否为图片，不是就跳出循环
-				if (!(/^image\/.*$/i.test(file.type))) {
-					alert("请选择图片上传！")
-					continue;
-				}
-				//实例化FileReader API  
-				var freader = new FileReader();
-				freader.readAsDataURL(file);
-				freader.onload = function (e) {
-					$("#avatarPic").attr("src", e.target.result);  //显示图片
-				}
-			}
-		});
-
-		/*
-		* 修改昵称
-		*/
-		$(".set-up-list .item[data-index='1']").click(function(){
-			$(".mask").show();
-			$(".reviseName").show();
-			$(".popup-wrap").css("bottom","0");
-		});
-
-		$(".reviseName .reviseBtn").click(function(){
-			var newVal = $(".newUsername").val();
-			$("#nameVal").html(newVal)
-		})
-
-		//修改性别
-		$(".set-up-list .item[data-index='2']").click(function(){
-			$(".mask").show();
-			$(".reviseSex").show();
-			$(".popup-wrap").css("bottom","0");
-		});
-
-		//修改手机
-		$(".set-up-list .item[data-index='3']").click(function(){
-			$(".mask").show();
-			$(".revisePhone").show();
-			$(".popup-wrap").css("bottom","0");
-		});
 	
-	
-
-		/*
-		* 关闭弹框
-		*/
-		$(".closeBtn,.reviseBtn,.mask").click(function(){
-			$(".mask").hide();
-			$(".reviseName,.reviseSex,.revisePhone").hide();
-			$(".popup-wrap").css("bottom","-100%");
-		})
-
-	</script>
 </body>
 
 </html>
