@@ -17,6 +17,7 @@
 		
 	<div class="wrap_frame">
 			<!--public head-->
+			<div class="sec">
 			<div class="lb_headWrap lb_headWrap_bacColor topBox_backgroundColor ">
 				<p class="lb_headWrap_return" data-num="1" onclick="returnFun()">
 					<img class="lb_headWrap_return_img" src="../../img/public/back@2x.png"/>
@@ -61,7 +62,7 @@
 		   		<!--2-->
 		   		<div class="fangshi">
 		   			
-		   		<span class="span1" ><img src="../../img/my/椭圆1@2x.png" style="width: .3rem;" class="img1"/><img src="../../img/my/zhifubao@2x.png" style="width: .48rem;" class="img3"/><span style="margin-right: .2rem;margin-left: 1.5rem;" >支付宝</span></span>
+		   		<span class="span1" ><img src="../../img/my/xuanzhong@2x.png" style="width: .3rem;" class="img1"/><img src="../../img/my/zhifubao@2x.png" style="width: .48rem;" class="img3"/><span style="margin-right: .2rem;margin-left: 1.5rem;" >支付宝</span></span>
 		   		<span class="span2" ><img src="../../img/my/weixuanzhong@2x.png" style="width: .3rem;" class="img2"><img src="../../img/my/weixin@2x.png" style="width: .48rem;" class="img4"/><span style="margin-left: 1.5rem;margin-right: .2rem;">微信</span></span>
 		   			
 		   			
@@ -127,7 +128,7 @@
          	提交申请
          </div>
 	
-		
+		</div>
 		
 		
 	</div>	
@@ -139,10 +140,10 @@
 	   	$(".span1").click(function(){
 	   		
 	   		
-	   		if($(".img1").attr("src")=="../../img/my/椭圆1@2x.png"){
+	   		if($(".img1").attr("src")=="../../img/my/xuanzhong@2x.png"){
 	   			
 	   			$(".img1").attr("src","../../img/my/weixuanzhong@2x.png");
-	   			$(".img2").attr("src","../../img/my/椭圆1@2x.png");
+	   			$(".img2").attr("src","../../img/my/xuanzhong@2x.png");
 	   			$(".img33").attr('src',"../../img/my/weixin@2x.png");
 	   			if($('#bangding').html()=="请输入微信账号"){
 	   				
@@ -161,7 +162,7 @@
 	   		}
 	   		else if($(".img1").attr("src")=="../../img/my/weixuanzhong@2x.png"){
 	   			
-	   			$(".img1").attr("src","../../img/my/椭圆1@2x.png");
+	   			$(".img1").attr("src","../../img/my/xuanzhong@2x.png");
 	   			$(".img2").attr("src","../../img/my/weixuanzhong@2x.png");
 	   			$(".img33").attr('src',"../../img/my/zhifubao@2x.png");
 	   			if($('#bangding').html()=="请先绑定一个支付宝账号"){
@@ -183,10 +184,10 @@
 	   	$(".span2").click(function(){
 	   		
 	   		
-	   		if($(".img2").attr("src")=="../../img/my/椭圆1@2x.png"){
+	   		if($(".img2").attr("src")=="../../img/my/xuanzhong@2x.png"){
 	   			
 	   			$(".img2").attr("src","../../img/my/weixuanzhong@2x.png");
-	   			$(".img1").attr("src","../../img/my/椭圆1@2x.png");
+	   			$(".img1").attr("src","../../img/my/xuanzhong@2x.png");
      			$(".img33").attr('src',"../../img/my/zhifubao@2x.png");
      			if($('#bangding').html()=="请先绑定一个支付宝账号"){
 	   				
@@ -200,7 +201,7 @@
 	   		}
 	   		else if($(".img2").attr("src")=="../../img/my/weixuanzhong@2x.png"){
 	   			
-	   			$(".img2").attr("src","../../img/my/椭圆1@2x.png");
+	   			$(".img2").attr("src","../../img/my/xuanzhong@2x.png");
 	   			$(".img1").attr("src","../../img/my/weixuanzhong@2x.png");	
 	   			$(".img33").attr('src',"../../img/my/weixin@2x.png");
 	   			if($('#bangding').html()=="请输入微信账号"){
@@ -222,13 +223,15 @@
 
 //	支付方式的选择结束	   	
 	//input标签获取焦点
+	
 	$(".tiqian,.zhifumima").focus(function(){
 		var u = navigator.userAgent;
             var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
             if(isAndroid){
             $('.wrap_frame').height( $('.wrap_frame').height()+200)
-			$('.wrap_frame').scrollTop(200)
-		    }
+			$('.wrap_frame').scrollTop(100)
+			// console.log($('.wrap_frame').scrollTop())
+			}
 	})
 	.blur(function(){  
 		var u = navigator.userAgent; //失去焦点时重新回到原来的状态

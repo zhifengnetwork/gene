@@ -12,9 +12,8 @@ img {
 	max-width: 100%;
 }
 #container .cont-wrap .data .img {
-	padding: 4% 2% 4% 3%;
-	width: .55rem;
-	font-size: 0;
+	padding: 4% 2% 0 2%;
+	width: 10%;
 }
 #container .cont-wrap .data div {
 	display: inline-block;
