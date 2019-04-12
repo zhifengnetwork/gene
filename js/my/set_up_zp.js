@@ -21,25 +21,19 @@ window.onload = function () {
 
 
 
-    //获取原窗口的高度
-    var originalHeight = document.documentElement.clientHeight || document.body.clientHeight;
-    window.onresize = function () {
-        //键盘弹起与隐藏都会引起窗口的高度发生变化
-        var resizeHeight = document.documentElement.clientHeight || document.body.clientHeight;
-        if (resizeHeight - 0 < originalHeight - 0) {
-            //当软键盘弹起，在此处操作
-            $(".popup-wrap").css("bottom", "0");
-
-        } else {
-            //当软键盘收起，在此处操作
-           
-        }
-    }
-
-
     /*
     * 修改昵称
     */
+
+    //阻止默认事件，禁止滑动
+    // function stop(name) {
+    //     var $name = $(name);
+    //         $name.bind("touchmove","touchstart",function(e){
+    //         e.preventDefault();
+    //     })
+    // }
+
+    // 昵称弹窗
     $(".set-up-list .item[data-index='1']").click(function () {
         $(".mask").show();
         $(".reviseName").show();
@@ -54,12 +48,36 @@ window.onload = function () {
     // 获取焦点
     $(".newUsername,.codeNum").focus(function(){
         scroolToEnd();
+        return;
     })
+    //失去焦点
+    $(".newUsername,.codeNum").blur(function(){
+        scroolToSart();
+    })
+
     function scroolToEnd() { 
-        var scrollHeight =$(window).height();
-        console.log(scrollHeight)
-        $('.wrap_frame').scrollTop(scrollHeight,100);
+        $('.popup-wrap').scrollTop($('.popup-wrap').height(),100);
     }
+    function scroolToSart() { 
+        scrollTo(0,0);
+    }
+
+
+    // $(".newUsername,.codeNum").focus(function () {
+    //     var target = this;
+    //     // 使用定时器是为了让输入框上滑时更加自然
+    //     setTimeout(function () {
+    //         target.scrollIntoView(true);
+    //         target.scrollIntoViewIfNeeded();
+    //     }, 100);
+    // });
+
+    // $(".newUsername,.codeNum").blur(function(){
+    //     setTimeout(function () {
+    //         window.scrollTo(0, document.body.scrollTop + 1); 
+    //         document.body.scrollTop >= 1 && window.scrollTo(0, document.body.scrollTop - 1); 
+    //     }, 100);
+    // })
 
 
     //修改性别
@@ -120,7 +138,6 @@ window.onload = function () {
         $(".mask").hide();
         $(".reviseName,.reviseSex,.revisePhone").hide();
         $(".popup-wrap").css("bottom", "-100%");
-
     })
 
 

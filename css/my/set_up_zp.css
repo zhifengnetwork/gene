@@ -84,6 +84,7 @@
 	top: 0;
 	z-index: 99;
 	display: none;
+	overflow-y: scroll;
 }
 /* 弹框公共样式 */
 .popup-wrap{
@@ -254,7 +255,7 @@
 	box-sizing: border-box;
 }
 .revisePhone .verification .cont-wrap .codeNum{
-	width: 2rem;
+	width: 1.8rem;
 	line-height: .58rem;
 	font-size: .24rem;
 	display: inline-block;
