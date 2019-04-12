@@ -3,8 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport"
-		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
 	<title>设置</title>
 	<script src="../../js/public/rem.js"></script>
 	<link rel="stylesheet" href="../../css/public/public.css" />
@@ -12,50 +11,70 @@
 	<link rel="stylesheet" href="../../css/my/set_up_zp.css" />
 </head>
 
-<body>
-	<div class="wrap_frame">
-		<!-- 头部 -->
-		<div class="lb_headWrap">
-			<p class="lb_headWrap_return" data-num="1" onclick="returnFun()">
-				<img class="lb_headWrap_return_img" src="../../img/public/back@2x.png" />
-			</p>
-			<span>设置</span>
-		</div>
-		<!-- 头像 -->
-		<div class="avatar">
-			<div class="fl"><span>头像</span></div>
-			<div class="fr">
-				<img id="avatarPic" src="../../img/my/touxiang@2x.png" />
-				<input type="file" id="selectAvatar" accept="image/*" name="avatar-pic">
+	<body>
+		<div class="wrap_frame">
+			<!-- 头部 -->
+			<div class="lb_headWrap">
+				<p class="lb_headWrap_return" data-num="1" onclick="returnFun()">
+					<img class="lb_headWrap_return_img" src="../../img/public/back@2x.png" />
+				</p>
+				<span>设置</span>
 			</div>
-		</div>
+			<!-- 头像 -->
+			<div class="avatar">
+				<div class="fl"><span>头像</span></div>
+				<div class="fr">
+					<img id="avatarPic" src="../../img/my/touxiang@2x.png" />
+					<input type="file" id="selectAvatar" accept="image/*" name="avatar-pic">
+				</div>
+			</div>
 
-		<div class="set-up-list">
-			<ul>
-				<li class="item" data-index="1">
-					<a href="#">
-						<div class="fl"><span>用户名</span></div>
-						<div class="fr">
-							<span id="nameVal">小腊肉</span>
-							<img src="../../img/my/youjian2@2x.png" />
+			<div class="set-up-list">
+				<ul>
+					<li class="item" data-index="1">
+						<a href="#">
+							<div class="fl"><span>用户名</span></div>
+							<div class="fr">
+								<span id="nameVal">小腊肉</span>
+								<img src="../../img/my/youjian2@2x.png" />
+							</div>
+						</a>
+					</li>
+					<li class="item" data-index="2">
+						<a href="#">
+							<div class="fl"><span>性别</span></div>
+							<div class="fr">
+								<span id="sexVal">男</span>
+								<img src="../../img/my/youjian2@2x.png" />
+							</div>
+						</a>
+					</li>
+					<li class="item" data-index="3">
+						<a href="#">
+							<div class="fl"><span>手机</span></div>
+							<div class="fr">
+								<span id="phoneVal">17875592622</span>
+								<img src="../../img/my/youjian2@2x.png" />
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<!-- 底部弹框 -->
+			<div class="mask">
+				<div class="popup-wrap">
+					<!-- 修改昵称 -->
+					<div class="reviseName">
+						<div class="popup-header">
+							<h3>修改昵称</h3>
+							<span class="closeBtn"><img src="../../img/public/closeBtn.png"/></span>
 						</div>
-					</a>
-				</li>
-				<li class="item" data-index="2">
-					<a href="#">
-						<div class="fl"><span>性别</span></div>
-						<div class="fr">
-							<span id="sexVal">男</span>
-							<img src="../../img/my/youjian2@2x.png" />
+						<div class="popup-content">
+							<input type="text" placeholder="输入新昵称：" class="newUsername">
 						</div>
-					</a>
-				</li>
-				<li class="item" data-index="3">
-					<a href="#">
-						<div class="fl"><span>手机</span></div>
-						<div class="fr">
-							<span id="phoneVal">17875592622</span>
-							<img src="../../img/my/youjian2@2x.png" />
+						<div class="popup-btn">
+							<button class="reviseBtn">确认修改</button>
 						</div>
 					</a>
 				</li>
@@ -123,7 +142,6 @@
 					</div>
 			</div>			
 		</div>
-
 	</div>
 	<script src="../../js/public/jquery-1.8.3.js"></script>
 	<script src="../../js/public/public.js"></script>

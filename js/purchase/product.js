@@ -10,6 +10,7 @@ $(function(){
         }else{
             acc.children().children().attr('src','../../img/purchase/product/collection-r@2x.png').addClass('active')
         }
+        console.log($(document).scrollTop())
     })
 
     //领取优惠券
@@ -17,10 +18,10 @@ $(function(){
         var add = $(this)
         $('.receive_coupon').show()  //遮罩层
         $('.receive_box').show()     //优惠券
-        thisScrollNum = $(document).scrollTop();
+        // thisScrollNum = $(document).scrollTop();
 				$('.wrap_frame').css({
 					'position': 'fixed',
-					'top': -thisScrollNum,
+					'top': 0,
 					'left': 0,
                     'height': '100%',
                     'width':'100%',
@@ -54,6 +55,7 @@ $(function(){
         $(document).scrollTop(thisScrollNum);
 		$("body").unbind("touchmove");
     }
+    
 
     //使用优惠券
     $('.use').click(function(){
@@ -62,12 +64,12 @@ $(function(){
          if(employ.parent().hasClass('coupon_use')){
          employ.parent().addClass('employ').removeClass('coupon_use')
          employ.parent().append(img)
-         $('.popup').show()
+         $('.popup').fadeIn(500)
          $('.popup').animate({
              opactiy:1
          }
          ,1000,function(){
-            $('.popup').hide()
+            $('.popup').fadeOut(500)
          }) 
          }
     })

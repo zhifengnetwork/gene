@@ -90,10 +90,10 @@ $(function(){
         var add = $(this)
         $('.receive_coupon').show()  //遮罩层
         $('.receive_box').show()     //优惠券
-        thisScrollNum = $(document).scrollTop();
+        // thisScrollNum = $(document).scrollTop();
 				$('.wrap_frame').css({
 					'position': 'fixed',
-					'top': -thisScrollNum,
+					'top': 0,
 					'left': 0,
                     'height': '100%',
                     'width':'100%',
@@ -141,22 +141,22 @@ $(function(){
          $('.man').show().find('.discount_num').html(html)
          $('.coupon_discount').html(pri)
          var img = `<img src="../../img/purchase/logo@2x.png" alt="" class="been">`
-         if(lengthh>=1){  //使用优惠券的长度大于或等于一
-            alert("只能使用一张优惠卷哦~")
-            return
-        }
          if(employ.parent().hasClass('coupon_use')){
-         employ.parent().addClass('employ').removeClass('coupon_use')
+         employ.parent().addClass('employ').addClass('add').removeClass('coupon_use').parent().siblings().find('.employ').removeClass('employ').addClass('coupon_use').find('.been').remove()
          employ.parent().append(img)
          length--;   //优惠券长度-1
          $('.numm').find('.discount_num').html(length)
-         $('.popup').show()  //使用成功
+         $('.popup').fadeIn(500)  //使用成功
          $('.popup').animate({
              opactiy:1
          }
          ,1000,function(){
-            $('.popup').hide()
+            $('.popup').fadeOut(500)
          })
+         }
+      else if(employ.parent().hasClass('add')){
+            employ.parent().addClass('coupon_use').removeClass('employ').children('.been').remove()
+            console.log(employ.parent().children('.been'))
          }
     })
 
