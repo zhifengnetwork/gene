@@ -116,7 +116,7 @@ window.onload = function () {
     /*
     * 关闭弹框
     */
-    $(".closeBtn,.reviseBtn,.mask").click(function () {
+    $(".closeBtn,.reviseBtn").click(function () {
         $(".mask").hide();
         $(".reviseName,.reviseSex,.revisePhone").hide();
         $(".popup-wrap").css("bottom", "-100%");
