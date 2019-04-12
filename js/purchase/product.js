@@ -60,15 +60,17 @@ $(function(){
          var employ = $(this)
          var img = `<img src="../../img/purchase/logo@2x.png" alt="" class="been">`
          if(employ.parent().hasClass('coupon_use')){
-         employ.parent().addClass('employ').removeClass('coupon_use')
-         employ.parent().append(img)
-         $('.popup').show()
-         $('.popup').animate({
-             opactiy:1
-         }
-         ,1000,function(){
-            $('.popup').hide()
-         }) 
+            employ.parent().addClass('employ').removeClass('coupon_use')
+            employ.parent().append(img)
+            length--;   //优惠券长度-1
+            $('.numm').find('.discount_num').html(length)
+            $('.popup').fadeIn(500)  //使用成功
+            $('.popup').animate({
+                opactiy:1
+            }
+            ,1000,function(){
+               $('.popup').fadeOut(500)
+            })
          }
     })
     
