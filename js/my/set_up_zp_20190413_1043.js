@@ -40,11 +40,11 @@ window.onload = function () {
     /*
     * 修改昵称
     */
-    $(".set-up-list .item[data-index='1']").click(function () {
-        $(".mask").show();
-        $(".reviseName").show();
-        $(".popup-wrap").css("bottom", "0");
-    });
+//  $(".set-up-list .item[data-index='1']").click(function () {
+//      $(".mask").show();
+//      $(".reviseName").show();
+//      $(".popup-wrap").css("bottom", "0");
+//  });
 
     $(".reviseName .reviseBtn").click(function () {
         var newVal = $(".newUsername").val();
@@ -116,12 +116,12 @@ window.onload = function () {
     /*
     * 关闭弹框
     */
-    $(".closeBtn,.reviseBtn").click(function () {
-        $(".mask").hide();
-        $(".reviseName,.reviseSex,.revisePhone").hide();
-        $(".popup-wrap").css("bottom", "-100%");
-
-    })
+//  $(".closeBtn,.reviseBtn").click(function () {
+//      $(".mask").hide();
+//      $(".reviseName,.reviseSex,.revisePhone").hide();
+//      $(".popup-wrap").css("bottom", "-100%");
+//
+//  })
 
 
 
