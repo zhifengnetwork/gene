@@ -109,22 +109,7 @@
 /*下拉框*/ 
 .drop_down_box {
 	display: none;
-<<<<<<< HEAD
-	overflow-y: scroll;
-}
-/* 弹框公共样式 */
-.popup-wrap{
-	width: 100%;
-    min-height:4rem;
-    background: #fff;
-	position: fixed;
-	left: 0;
-	bottom: -100%;
-	z-index: 100;
-	padding:0 .2rem .2rem .2rem;
-=======
 	padding-bottom: .2rem;
->>>>>>> a840f74fc5a856143fc78b5aa5ad525ca3025666
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -225,13 +210,6 @@
 	width: 1.6rem;
 	height: 100%;
 }
-<<<<<<< HEAD
-.revisePhone .verification .cont-wrap .codeNum{
-	width: 1.8rem;
-	line-height: .58rem;
-	font-size: .24rem;
-	display: inline-block;
-=======
 .drop_down_bind_box_inp {
 	float: left;
 	width: 3rem;
@@ -246,7 +224,6 @@ input {
 	/*IOS*/
 	-webkit-appearance:none; 
 	background: none;
->>>>>>> a840f74fc5a856143fc78b5aa5ad525ca3025666
 	border: none;
 	outline: none;
 }
