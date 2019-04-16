@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="../../css/my/set_up_zp.css" />
 </head>
 
+<<<<<<< HEAD
 <body>
 	<div class="wrap_frame">
 		<!-- 头部 -->
@@ -121,8 +122,106 @@
 				<div class="popup-btn">
 					<button class="reviseBtn">确认修改</button>
 				</div>
+=======
+	<body>
+		<div class="wrap_frame">
+			<!-- 头部 -->
+			<div class="lb_headWrap">
+				<p class="lb_headWrap_return" data-num="1" onclick="returnFun()">
+					<img class="lb_headWrap_return_img" src="../../img/public/back@2x.png" />
+				</p>
+				<span>设置</span>
+			</div>
+			<!-- 头像 -->
+			<div class="avatar">
+				<div class="fl"><span>头像</span></div>
+				<div class="fr">
+					<img class="avatarPic_icon" id="avatarPic" src="../../img/my/touxiang@2x.png" />
+					<input type="file" id="selectAvatar" accept="image/*" name="avatar-pic">
+				</div>
+			</div>
+
+			<div class="set-up-list">
+				<!--class="drop_own";无样式=>监测点击状态
+					data-state="1"; =>未展开；
+					data-state="2"; =>展开；
+				-->
+					
+					<div class="item" >
+						<div class="item_top drop_own" data-state="1" onclick="dropDownFun(this)">
+							<p class="fl"><span>昵称</span></p>
+							<p class="fr">
+								<span id="nameVal">小腊肉</span>
+							</p>
+							<img src="../../img/my/youjian2@2x.png" />
+						</div>
+						<!-- public 下拉框 -->
+						<div class="drop_down_box">
+							<div class="drop_down_inp_box">
+								<input type="text" class="drop_down_inp" placeholder="请输入新昵称">
+							</div>
+							<!--按钮-->
+							<div class="drop_down_btn_box">
+								<p class="drop_down_btn modify_nickname">修改</p>
+							</div>
+						</div>
+
+					</div>
+					<div class="item">
+						<div class="item_top drop_own" data-state="1" onclick="dropDownFun(this)">
+							<p class="fl"><span>性别</span></p>
+							<p class="fr">
+								<span id="sexVal">男</span>
+							</p>
+							<img  src="../../img/my/youjian2@2x.png" />
+						</div>
+						<!-- public 下拉框 -->
+						<div class="drop_down_box clearfloat">
+							<div class="drop_down_gender_box clearfloat">
+								<!--
+									1、class="choice_but";无style
+									2、点击时style=>class="drop_down_gende_active";
+								-->
+								<p class="drop_down_gende_left choice_but drop_down_gende_active" data-val="male">男</p>
+								<p class="drop_down_gende_right choice_but"  data-val="female">女</p>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item_top drop_own" data-state="1" onclick="dropDownFun(this)">
+							<p class="fl"><span>手机</span></p>
+							<p class="fr">
+								<span id="phoneVal">17875592622</span>
+							</p>
+							<img src="../../img/my/youjian2@2x.png" />
+						</div>
+						<!-- public 下拉框 -->
+						<div class="drop_down_box">
+							<!--绑定手机-->
+							<div class="drop_down_bind_wrap">
+								<div class="drop_down_bind_box">
+									<p class="drop_down_bind_box_titile">绑定手机号:</p>
+									<input class="drop_down_bind_box_inp" type="number" class="" placeholder="请输入绑定手机号">
+								</div>
+							</div>
+							<!--按钮-->
+							<div class="drop_down_btn_box">
+								<p class="drop_down_btn binding_but">绑定</p>
+							</div>
+						</div>
+					</div>
+					<div class="item" onclick="pageJump('../login/retrieve_pass.html')">
+						<div class="item_top">
+							<div class="fl"><span>修改密码</span></div>
+							<div class="fr">
+								<img src="../../img/my/youjian2@2x.png" />
+							</div>
+						</div>
+					</div>
+>>>>>>> a840f74fc5a856143fc78b5aa5ad525ca3025666
 			</div>
 		</div>
+<<<<<<< HEAD
 	</div>
 
 	</div>
@@ -130,6 +229,132 @@
 	<script src="../../js/public/public.js"></script>
 	<script src="../../js/my/set_up_zp.js"></script>
 
+=======
+		<script src="../../js/public/jquery-1.8.3.js"></script>
+		<script src="../../js/public/public.js"></script>
+		<script>
+			/*点击-切换下拉框*/
+			function dropDownFun(_this){
+				/*保存当前-点击状态*/
+				var thisState = $(_this).attr('data-state');
+				console.log('当前状态:',thisState);
+				/*未-展开*/
+				for (var i=0;i<$('.drop_down_box').length;i++) {
+					if($('.drop_own').eq(i).attr('data-state') == '2'){
+						$('.drop_down_box').eq(i).slideUp();
+						$('.drop_own').eq(i).attr('data-state','1');
+					}
+				}
+				/*当前*/
+				if(thisState == '1'){
+					$(_this).siblings('.drop_down_box').slideDown();
+					$(_this).attr('data-state','2');
+					/*'>' 动画=>顺时针90°*/
+					console.log($(_this).find('.item_button_icon'));
+					$(_this).find('img').css({
+						'transform': 'rotate(90deg)',
+					    '-webkit-transform': 'rotate(90deg)',
+					    '-moz-transform': 'rotate(90deg)',
+					    '-o-transform': 'rotate(90deg)',
+					    '-ms-transform': 'rotate(90deg)'
+					});
+				}else {
+					$(_this).siblings('.drop_down_box').slideUp();
+					$(_this).attr('data-state','1');
+					/*'>' 动画=>逆时针90°*/
+					$(_this).find('img').css({
+						'transform': 'rotate(-0deg)',
+					    '-webkit-transform': 'rotate(-0deg)',
+					    '-moz-transform': 'rotate(-0deg)',
+					    '-o-transform': 'rotate(-0deg)',
+					    '-ms-transform': 'rotate(-0deg)'
+					});
+				}
+				
+			}
+			/**
+			 * 收起-下拉框
+			 * _jqThis传参: $(this)
+			 * 思路:1、当前元素=>祖父元素=>兄弟元素=>改变data-state状态。
+			 * 	   2、当前元素=>祖父元素=>改变滑动收起。
+			 * **/
+			function retractFun(_jqThis){
+				if(_jqThis.parents('.drop_down_box').siblings('.drop_own').attr('data-state','1') == '1'){
+					_jqThis.parents('.drop_down_box').slideDown();
+					_jqThis.parents('.drop_down_box').siblings('.drop_own').attr('data-state','2');
+					_jqThis.parents('.drop_down_box').siblings('.drop_own').find('img').css({
+						'transform': 'rotate(90deg)',
+					    '-webkit-transform': 'rotate(90deg)',
+					    '-moz-transform': 'rotate(90deg)',
+					    '-o-transform': 'rotate(90deg)',
+					    '-ms-transform': 'rotate(90deg)'
+					});
+				}else {
+					_jqThis.parents('.drop_down_box').slideUp();
+					_jqThis.parents('.drop_down_box').siblings('.drop_own').attr('data-state','1');
+					/*'>' 动画=>逆时针90°*/
+					_jqThis.parents('.drop_down_box').siblings('.drop_own').find('img').css({
+						'transform': 'rotate(-0deg)',
+					    '-webkit-transform': 'rotate(-0deg)',
+					    '-moz-transform': 'rotate(-0deg)',
+					    '-o-transform': 'rotate(-0deg)',
+					    '-ms-transform': 'rotate(-0deg)'
+					});
+				}
+			}
+			/*加载html后=>js*/
+			$(document).ready(function(){
+				/**
+				 * 上传头像
+				 * **/
+			    $("#selectAvatar").change(function (e) {
+			        for (var i = 0; i < e.target.files.length; i++) {
+			            var file = e.target.files.item(i);
+			            //验证是否为图片，不是就跳出循环
+			            if (!(/^image\/.*$/i.test(file.type))) {
+			                alert("请选择图片上传！")
+			                continue;
+			            }
+			            //实例化FileReader API  
+			            var freader = new FileReader();
+			            freader.readAsDataURL(file);
+			            freader.onload = function (e) {
+			                $("#avatarPic").attr("src", e.target.result);  //显示图片
+			            }
+			        }
+    			});
+    			
+    			/*修改昵称*/
+    			$('.modify_nickname').on('click',function(){
+    				
+    				/*收起下拉框*/
+    				retractFun($(this));
+    			})
+    			/*选择性别*/
+    			$('.drop_down_gender_box .choice_but').on('click',function(){
+    				$(this).addClass('drop_down_gende_active').siblings().removeClass('drop_down_gende_active');
+    				/*更改渲染信息*/
+    				$('#sexVal').html($(this).html());
+    				console.log('性别选择:',$(this).attr('data-val'));
+    				/*收起下拉框*/
+    				retractFun($(this));
+    			})
+    			/*绑定手机号*/
+    			$('.binding_but').on('click',function(){
+    				
+    				/*收起下拉框*/
+    				retractFun($(this));
+    			})
+    			
+    			/*绑定手机号 input*/
+    			$('.drop_down_bind_box_inp').focus(function(){
+    				$(window).scrollTop($('.drop_down_bind_box_inp').offset().top/2,300);
+    			})
+
+			})
+		</script>
+		
+>>>>>>> a840f74fc5a856143fc78b5aa5ad525ca3025666
 
 </body>
 

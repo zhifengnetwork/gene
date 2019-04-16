@@ -24,6 +24,7 @@ window.onload = function () {
     /*
     * 修改昵称
     */
+<<<<<<< HEAD:js/my/set_up_zp.js
 
     //阻止默认事件，禁止滑动
     // function stop(name) {
@@ -39,6 +40,13 @@ window.onload = function () {
         $(".reviseName").show();
         $(".popup-wrap").css("bottom", "0");
     });
+=======
+//  $(".set-up-list .item[data-index='1']").click(function () {
+//      $(".mask").show();
+//      $(".reviseName").show();
+//      $(".popup-wrap").css("bottom", "0");
+//  });
+>>>>>>> a840f74fc5a856143fc78b5aa5ad525ca3025666:js/my/set_up_zp_20190413_1043.js
 
     $(".reviseName .reviseBtn").click(function () {
         var newVal = $(".newUsername").val();
@@ -134,11 +142,20 @@ window.onload = function () {
     /*
     * 关闭弹框
     */
+<<<<<<< HEAD:js/my/set_up_zp.js
     $(".closeBtn,.reviseBtn,.mask").click(function () {
         $(".mask").hide();
         $(".reviseName,.reviseSex,.revisePhone").hide();
         $(".popup-wrap").css("bottom", "-100%");
     })
+=======
+//  $(".closeBtn,.reviseBtn").click(function () {
+//      $(".mask").hide();
+//      $(".reviseName,.reviseSex,.revisePhone").hide();
+//      $(".popup-wrap").css("bottom", "-100%");
+//
+//  })
+>>>>>>> a840f74fc5a856143fc78b5aa5ad525ca3025666:js/my/set_up_zp_20190413_1043.js
 
 
 
