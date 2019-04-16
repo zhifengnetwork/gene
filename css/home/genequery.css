@@ -1,3 +1,9 @@
+.zuidadiv{
+	
+	padding-bottom: .5rem;
+	box-sizing: border-box;
+	
+}
 .form_title{
 	
 	
@@ -9,14 +15,22 @@
 	text-align: center;
 	height: 1.2rem;
 	line-height: 1.2rem;
-	font-size: .35rem;
+	font-size: .32rem;
 	border: 1px solid black;
 	border-bottom: none;
 	
 }
+.biaogege{
+	
+	width: 96%;
+	margin: auto;
+	border: 1px solid black;
+	
+	
+}
 tr{
 	
-	font-size: .35rem;
+	font-size: .3rem;
 	text-align: center;
 	
 }
