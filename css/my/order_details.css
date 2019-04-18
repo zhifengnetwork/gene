@@ -96,7 +96,11 @@ img {
 	color: #666;
 	line-height: .5rem;
 }
-.content .buy-wrap .time span {
+.content .buy-wrap .time span:nth-child(1) {
+	display: inline-block;
+	width: 22%;
+}
+.content .buy-wrap .time span:nth-child(2) {
 	margin-right: 5%;
 }
 
