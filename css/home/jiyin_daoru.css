@@ -1,47 +1,11 @@
 
-.headWrap{
-	
-	position:relative;
-	width: 100%;
-	height: .9rem;
-	line-height: .9rem;
-	/*border: 1px solid green;*/
-	text-align: center;
-	color: black;
-	font-weight: bolder;
-	font-size: .4rem;
-	border-bottom: 1px solid gray;
-	
 
-}
-.lb_headWrap_return_img{
-	
-	position: absolute;
-	left: .3rem;
-	top: 0;
-	bottom: 0;
-	width: .4rem;
-	height: .4rem;
-	margin: auto 0;
-
-}
-.lb_header_righticon{
-	
-	position: absolute;
-	right: .3rem;
-	top: 0;
-	bottom: 0;
-	width: .8rem;
-	height: .8rem;
-	margin: auto 0;	
-	
-}
 .liebiao_ear{
 	
 	width: 90%;
 	margin: auto;
 	border: 2px solid #30ADE5;
-	margin-top: .5rem;
+	margin-top: 1.1rem;
 	
 }
 .liebiao_ear ul{
@@ -49,7 +13,7 @@
 	width: 90%;
 	margin: auto;
 	/*border: 1px solid green;*/
-	font-size: .4rem;
+	font-size: .3rem;
 
 }
 .liebiao_ear ul li{
@@ -72,7 +36,7 @@
 }
 .span_right img{
 	
-	width: .28rem;
+	width: .24rem;
 	position: absolute;
 	top: 0;
 	bottom: 0;

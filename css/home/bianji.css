@@ -1,46 +1,10 @@
-.headWrap{
-	
-	position:relative;
-	width: 100%;
-	height: .9rem;
-	line-height: .9rem;
-	/*border: 1px solid green;*/
-	text-align: center;
-	color: black;
-	font-weight: bolder;
-	font-size: .3rem;
-	border-bottom: 1px solid gray;
-	
 
-}
-.lb_headWrap_return_img{
-	
-	position: absolute;
-	left: .3rem;
-	top: 0;
-	bottom: 0;
-	width: .8rem;
-	height: .8rem;
-	margin: auto 0;
-
-}
-.lb_header_righticon{
-	
-	position: absolute;
-	right: .3rem;
-	top: 0;
-	bottom: 0;
-	width: .8rem;
-	height: .8rem;
-	margin: auto 0;	
-	
-}
 .liebiao_ear{
 	
 	width: 90%;
 	margin: auto;
 	border: 1px solid #30ADE5;
-	margin-top: .5rem;
+	margin-top: 1rem;
 	
 }
 .liebiao_ear ul{
@@ -64,25 +28,35 @@
 	border-bottom: none;
 	
 }
-.span_right{
+.fist{
 	
-	float: right;
-	
+	position: absolute;
+	top: 0;
+	right: -5%;
+	z-index: 1;
+	display: block;
+	width:15%;
+	height: 100%;
 }
+
 
 .span_right{
 	
 	position: absolute;
 	right:0;
+	left: 0;
 	top: 0;
 	bottom: 0;
-	margin: auto 0;
+	margin: auto;
+	z-index: 1;
 	width: .3rem;
 	height: .3rem;
 	border: .05rem solid #30ADE5;
 	border-radius: 50%;
 	/*background-color: rgb(225,6,2);*/
 	display: inline-block;
+	
+	
 	
 }
 .tip_ear{

@@ -3,19 +3,23 @@
 
 	<head>
 		<meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
 		<title></title>
+		<link rel="stylesheet" href="../../css/public/public_head.css">
 		<link rel="stylesheet" href="../../css/public/public.css" />
 		<link rel="stylesheet" href="../../css/home/bianji.css" />
+		<script src="../../js/public/rem.js"></script>
 	</head>
 
 	<body>
-		<div >
+		<div>
 			<!--public head-->
-			<div class="headWrap">
-				<span class="lb_headWrap_return_img" onclick="returnFun()">取消</span>
+			<div class="lb_headWrap">
+				<p class="lb_headWrap_return" data-num="1" onclick="returnFun()">
+					<img class="lb_headWrap_return_img" src="../../img/public/back@2x.png" />
+				</p>
 				<span>基因数据</span>
-				<span class="lb_header_righticon">删除</span>
+				<p class="lb_headWrap_text lb_header_righticon">删除</p>
 			</div>
 
 			<div class="liebiao_ear">
@@ -24,84 +28,79 @@
 
 					<li id="li1">
 						<span class="span_left">0119-29Y&nbsp;&nbsp;张李兴-基因数据1</span>
-						<span class="span_right"></span>
+						<p class="fist">
+							<span class="span_right"></span>
+						</p>
 
-					</li >
+					</li>
 					<li id="li2">
 						<span class="span_left">0119-29Y&nbsp;&nbsp;张李兴-基因数据2</span>
-						<span class="span_right"></span>
-
+						<p class="fist">
+							<span class="span_right"></span>
+						</p>
 					</li>
 					<li id="li3">
 						<span class="span_left">0119-29Y&nbsp;&nbsp;张李兴-基因数据3</span>
-						<span class="span_right"></span>
-
+						<p class="fist">
+							<span class="span_right"></span>
+						</p>
 					</li>
 					<li id="li4">
 						<span class="span_left">0119-29Y&nbsp;&nbsp;张李兴-基因数据4</span>
-						<span class="span_right"></span>
-
+						<p class="fist">
+							<span class="span_right"></span>
+						</p>
 					</li>
 					<li id="li5">
 						<span class="span_left">0119-29Y&nbsp;&nbsp;张李兴-基因数据5</span>
-						<span class="span_right"></span>
-
+						<p class="fist">
+							<span class="span_right"></span>
+						</p>
 					</li>
 
 				</ul>
 
 			</div>
-			
+
 			<div class="tip_ear">
-			<p class="tip">您的基因检测结果尚未生成</p>
-			<p class="tip">请在PC上登录网站，上传您的基因数据</p>
+				<p class="tip">您的基因检测结果尚未生成</p>
+				<p class="tip">请在PC上登录网站，上传您的基因数据</p>
 			</div>
-			
-			
-			
-			
-			
 
 		</div>
 		<script src="../../js/public/jquery-1.8.3.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../../js/public/rem.js"></script>
-        <script type="text/javascript" src="../../js/public/public.js" ></script>
+		<script type="text/javascript" src="../../js/public/public.js"></script>
 		<script>
 			/*编辑-是否选中*/
-			$(".span_right").click(function() {
-				if($(this).css("background-color") == 'rgb(225, 6, 2)') {
-					$(this).css("background-color", '#F5F5F5');
+			//			$(".span_right").click(function() {
+			$(".fist").click(function() {
+				var childElen = $(this).find('.span_right');
+				if(childElen.css("background-color") == 'rgb(225, 6, 2)') {
+					childElen.css("background-color", '#F5F5F5');
 					$(this).parent("li").removeClass("selected")
 
 				} else {
-					$(this).css("background-color", 'rgb(225, 6, 2)');
+					childElen.css("background-color", 'rgb(225, 6, 2)');
 					$(this).parent("li").addClass("selected")
 				}
 
 			})
 			$(".lb_header_righticon").click(function() {
 				$(".liebiao_ear ul li").each(function(index) {
-               
+
 					var _this = $(this)
 					if(_this.hasClass("selected")) {
-						
+
 						console.log($(this).attr('id'))
 						_this.remove();
-					
-					}
-				     })
-				if($(".liebiao_ear ul li").length == 0){  
-					  $(".liebiao_ear").hide()	
-				}
-				
-			})
-			
-			
-			
-			
-			
 
-			
+					}
+				})
+				if($(".liebiao_ear ul li").length == 0) {
+					$(".liebiao_ear").hide()
+				}
+
+			})
 		</script>
 
 	</body>
