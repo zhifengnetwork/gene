@@ -84,7 +84,17 @@
 	/*background-color: rgb(225,6,2);*/
 	display: inline-block;
 	
+}
+.tip_ear{
+	
+	padding-top: .1rem;
+	padding-left: 9%;
 	
 	
+}
+.tip{
+	
+	color: gray;
+	color: .3rem;
 	
 }

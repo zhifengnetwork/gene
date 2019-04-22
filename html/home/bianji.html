@@ -10,11 +10,11 @@
 	</head>
 
 	<body>
-		<div class="wrap_frame">
+		<div >
 			<!--public head-->
 			<div class="headWrap">
 				<span class="lb_headWrap_return_img" onclick="returnFun()">取消</span>
-				<span>基因导入</span>
+				<span>基因数据</span>
 				<span class="lb_header_righticon">删除</span>
 			</div>
 
@@ -22,27 +22,27 @@
 
 				<ul>
 
-					<li>
+					<li id="li1">
 						<span class="span_left">0119-29Y&nbsp;&nbsp;张李兴-基因数据1</span>
 						<span class="span_right"></span>
 
-					</li>
-					<li>
+					</li >
+					<li id="li2">
 						<span class="span_left">0119-29Y&nbsp;&nbsp;张李兴-基因数据2</span>
 						<span class="span_right"></span>
 
 					</li>
-					<li>
+					<li id="li3">
 						<span class="span_left">0119-29Y&nbsp;&nbsp;张李兴-基因数据3</span>
 						<span class="span_right"></span>
 
 					</li>
-					<li>
+					<li id="li4">
 						<span class="span_left">0119-29Y&nbsp;&nbsp;张李兴-基因数据4</span>
 						<span class="span_right"></span>
 
 					</li>
-					<li>
+					<li id="li5">
 						<span class="span_left">0119-29Y&nbsp;&nbsp;张李兴-基因数据5</span>
 						<span class="span_right"></span>
 
@@ -51,6 +51,16 @@
 				</ul>
 
 			</div>
+			
+			<div class="tip_ear">
+			<p class="tip">您的基因检测结果尚未生成</p>
+			<p class="tip">请在PC上登录网站，上传您的基因数据</p>
+			</div>
+			
+			
+			
+			
+			
 
 		</div>
 		<script src="../../js/public/jquery-1.8.3.js" type="text/javascript" charset="utf-8"></script>
@@ -71,17 +81,25 @@
 			})
 			$(".lb_header_righticon").click(function() {
 				$(".liebiao_ear ul li").each(function(index) {
-
+               
 					var _this = $(this)
 					if(_this.hasClass("selected")) {
-						_this.remove()
+						
+						console.log($(this).attr('id'))
+						_this.remove();
+					
 					}
-				})
+				     })
 				if($(".liebiao_ear ul li").length == 0){  
 					  $(".liebiao_ear").hide()	
 				}
 				
 			})
+			
+			
+			
+			
+			
 
 			
 		</script>
