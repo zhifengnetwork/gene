@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="../../css/public/public.css" />
+		<link rel="stylesheet" href="../../css/home/bianji.css" />
+	</head>
+
+	<body>
+		<div class="wrap_frame">
+			<!--public head-->
+			<div class="headWrap">
+				<span class="lb_headWrap_return_img" onclick="returnFun()">取消</span>
+				<span>基因导入</span>
+				<span class="lb_header_righticon">删除</span>
+			</div>
+
+			<div class="liebiao_ear">
+
+				<ul>
+
+					<li>
+						<span class="span_left">0119-29Y&nbsp;&nbsp;张李兴-基因数据1</span>
+						<span class="span_right"></span>
+
+					</li>
+					<li>
+						<span class="span_left">0119-29Y&nbsp;&nbsp;张李兴-基因数据2</span>
+						<span class="span_right"></span>
+
+					</li>
+					<li>
+						<span class="span_left">0119-29Y&nbsp;&nbsp;张李兴-基因数据3</span>
+						<span class="span_right"></span>
+
+					</li>
+					<li>
+						<span class="span_left">0119-29Y&nbsp;&nbsp;张李兴-基因数据4</span>
+						<span class="span_right"></span>
+
+					</li>
+					<li>
+						<span class="span_left">0119-29Y&nbsp;&nbsp;张李兴-基因数据5</span>
+						<span class="span_right"></span>
+
+					</li>
+
+				</ul>
+
+			</div>
+
+		</div>
+		<script src="../../js/public/jquery-1.8.3.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../js/public/rem.js"></script>
+        <script type="text/javascript" src="../../js/public/public.js" ></script>
+		<script>
+			/*编辑-是否选中*/
+			$(".span_right").click(function() {
+				if($(this).css("background-color") == 'rgb(225, 6, 2)') {
+					$(this).css("background-color", '#F5F5F5');
+					$(this).parent("li").removeClass("selected")
+
+				} else {
+					$(this).css("background-color", 'rgb(225, 6, 2)');
+					$(this).parent("li").addClass("selected")
+				}
+
+			})
+			$(".lb_header_righticon").click(function() {
+				$(".liebiao_ear ul li").each(function(index) {
+
+					var _this = $(this)
+					if(_this.hasClass("selected")) {
+						_this.remove()
+					}
+				})
+				if($(".liebiao_ear ul li").length == 0){  
+					  $(".liebiao_ear").hide()	
+				}
+				
+			})
+
+			
+		</script>
+
+	</body>
+
+</html>
