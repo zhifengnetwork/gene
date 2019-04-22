@@ -139,12 +139,13 @@
                     domClass: 'dropload-down',
                     domRefresh: '<div class="dropload-refresh">↑上拉加载更多</div>',
                     domLoad: '<div class="dropload-load"><span class="loading"></span>加载中...</div>',
-                    domNoData: '<div class="dropload-noData">暂无数据</div>'
+                    domNoData: '<div class="dropload-noData">暂无更多数据</div>'
                 },
+                // 下拉刷新加载
                 loadUpFn: function (me) {
                     $.ajax({
                         type: 'GET',
-                        url: './json/update.json',
+                        url: '../../js/json/update.json',
                         dataType: 'json',
                         success: function (data) {
                             var result = '';
@@ -189,12 +190,19 @@
                         }
                     });
                 },
+
+                // 进来时加载
                 loadDownFn: function (me) {
                     $.ajax({
                         type: 'GET',
-                        url: 'json/more.json',
+                        url: '../../js/json/more.json',
                         dataType: 'json',
                         success: function (data) {
+
+                           if(data.lists.length == 0){
+                             
+                                return false;
+                           }
                             var result = '';
                             counter++;
                             pageEnd = num * counter;
@@ -228,6 +236,7 @@
                                     me.noData();
                                     break;
                                 }
+                             
                             }
                             // 为了测试，延迟1秒加载
                             setTimeout(function () {
