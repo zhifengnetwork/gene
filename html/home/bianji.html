@@ -16,8 +16,8 @@
 			<!--public head-->
 			<div class="lb_headWrap">
 				<p class="lb_headWrap_return" data-num="1">
-					<!--<img class="lb_headWrap_return_img" src="../../img/public/back@2x.png" />-->
-					<span class="lb_headWrap_return_img22">取消</span>
+					<img class="lb_headWrap_return_img" src="../../img/public/back@2x.png" onclick="returnFun()" />
+					<span class="lb_headWrap_return_img22" style="display: none;">取消</span>
 					
 				</p>
 				<span>基因数据</span>
@@ -125,6 +125,8 @@
 				$(".lb_header_righticon22").hide();
 				$(".lb_header_righticon").show();
 				$(".tip_ear").show();
+				$(".lb_headWrap_return_img22").show()
+				$(".lb_headWrap_return_img").hide()
 				
 				
 			})
@@ -136,6 +138,8 @@
 				$(".lb_header_righticon22").show();
 				$(".lb_header_righticon").hide();
 				$(".tip_ear").hide();
+				$(".lb_headWrap_return_img22").hide()
+				$(".lb_headWrap_return_img").show()
 		
 			})
 			
