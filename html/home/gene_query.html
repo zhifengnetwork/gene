@@ -58,8 +58,8 @@
 			
 			
 			<!--按钮-->
-			<div class="analysis" onclick="window.location.href='gene_analysis.html?q='+cc">基因分析</div>
-			
+			<div class="analysis" onclick="analysis()">基因分析</div>
+			<!--onclick="window.location.href='gene_analysis.html?q='+cc"-->
 
 		</div>
      
@@ -127,6 +127,23 @@
 
 			}
 			//下拉框end
+			function analysis(){
+			
+				if(cc.length<2){
+					
+					alert("至少添加两份数据")
+					
+				}else{
+					
+					 location.href="gene_analysis.html?q="+cc
+					
+				}
+				
+				
+			}
+			
+			
+			
 		</script>
 
 	</body>
