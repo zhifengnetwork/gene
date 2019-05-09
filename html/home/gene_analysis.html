@@ -183,7 +183,7 @@
 					</div>
 				</div>
 
-				<table frame="void" rules="all" class="biaogege2">
+				<!--<table frame="void" rules="all" class="biaogege2">
 					<tr style="height:.9rem">
 						<td></td>
 						<td style="text-align: center;">平均传递次数</td>
@@ -194,6 +194,7 @@
 						<td>78</td>
 						<td>19</td>
 					</tr>
+					
 					<tr>
 						<td>B和C</td>
 						<td>89</td>
@@ -220,7 +221,70 @@
 						<td></td>
 					</tr>
 
-				</table>
+				</table>-->
+				
+				<!--第二个表格-->
+				<div class="l3h5">
+					<div>
+						<ul class="xiala">
+							<li class="xiala_name"><span class="first">A244</span><span class="he">和</span><span class="second">B888</span></li>
+							<li>78</li>
+							<li>89</li>
+						</ul>
+						<div style="text-align: left;" class="xiala_text">
+							
+							<p class="fuzhi_first">33dd33</p>
+							<p class="fuzhi_second">24444</p>
+							
+						</div>
+					</div>	
+					
+					<div>
+						<ul class="xiala">
+							<li class="xiala_name"><span class="first">C223</span><span class="he">和</span><span class="second">D789</span></li>
+							<li>78</li>
+							<li>89</li>
+						</ul>
+						<div style="text-align: left;" class="xiala_text">
+							
+							<p class="fuzhi_first">33ss4433</p>
+							<p class="fuzhi_second">29</p>
+							
+						</div>
+					</div>	
+					
+					<div>
+						<ul class="xiala">
+							<li class="xiala_name"><span class="first">E345</span><span class="he">和</span><span class="second">A667</span></li>
+							<li>78</li>
+							<li>89</li>
+						</ul>
+						<div style="text-align: left;" class="xiala_text">
+							
+							<p class="fuzhi_first">333d3</p>
+							<p class="fuzhi_second">2cc</p>
+							
+						</div>
+					</div>	
+		        </div>
+	  
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
 
 			</div>
 
@@ -231,6 +295,29 @@
 		<script src="../../js/public/public.js"></script>
 		<script>
 			var swiper = new Swiper('.swiper-container');
+			$(".xiala").click(function(){
+				
+				if($(this).parent().find('.xiala_text').is(':visible')){
+					
+					$(this).parent().find('.xiala_text').hide();
+				}else{
+					
+					$(this).parent().find('.xiala_text').show();
+				}
+				
+				console.log($(this).find('.first').text())
+				first_text=$(this).find('.first').text()
+				second_text=$(this).find('.second').text()
+				$(this).parent().find('.xiala_text').find(".fuzhi_first").html(first_text)
+				$(this).parent().find('.xiala_text').find(".fuzhi_second").html(second_text)
+				
+				
+				
+				
+			})
+			
+			
+			
 		</script>
 
 	</body>
