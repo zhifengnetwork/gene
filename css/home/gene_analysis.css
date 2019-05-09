@@ -11,9 +11,7 @@
 	width: 88%;
 	margin: 0 auto;
 	border: 1px solid #CCCCCC;
-	margin-top: .4rem;
-	
-	
+
 }
 tr{
 	
@@ -23,15 +21,33 @@ tr{
 	text-align: center;
 	
 }
-tr td:nth-child(1){
+tr td{
 	
-	width: 40%;
+	width: 33%;
 	
 	
 }
 .biaogege2{
 	
 	margin-top: 1rem;
+	
+	
+}
+.table_header{
+	
+	
+	text-align: center;
+	font-size: .4rem;
+	height: 1rem;
+	line-height: 1rem;
+	
+	
+}
+.swiper-slide{
+	
+	/*border: 1px solid red;*/
+	height: 8rem!important;
+	overflow: auto;
 	
 	
 }
