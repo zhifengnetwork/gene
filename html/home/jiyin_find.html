@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+		<title class="pageTopTitle" page-id="3">基因查询</title>
+		<script src="../../js/public/rem.js"></script>
+		<!--public-->
+		<link rel="stylesheet" href="../../css/public/public.css" />
+		<link rel="stylesheet" href="../../css/public/bottom_nav.css" />
+		<!--头部-->
+		<link rel="stylesheet" href="../../css/public/public_head.css" />
+		<link rel="stylesheet" href="../../css/home/jiyin_find.css" />
+
+	</head>
+
+	<body>
+		<div class="wrap_frame">
+			<!--public head-->
+			<div class="lb_headWrap ">
+				<p class="lb_headWrap_return" data-num="1" onclick="returnFun()">
+					<img class="lb_headWrap_return_img" src="../../img/public/back@2x.png" />
+				</p>
+
+				<span>基因查询</span>
+				<p class="lb_headWrap_text" data-num="2">
+					<span>编辑</span>
+				</p>
+			</div>
+			
+			
+			<!--table——box区域--> 
+			<div class="table_box">
+				
+				<p></p>
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+           
+
+
+
+
+
+
+
+
+			
+
+		</div>
+     
+		<script src="../../js/public/jquery-1.8.3.js"></script>
+		<script src="../../js/public/public.js"></script>
+		<!--公共底部导航栏-->
+		<script src="../../js/public/bottom_nav.js"></script>
+	
+		
+		<script>
+			//下拉框start
+			$("#main").click(function() {
+
+				if(i >= 2) {
+					alert('只能添加两份数据')
+				} else {
+
+					if($("#div").css("display") == "none") { //判断下拉还是上拉
+						$("#tan").text("▼");
+						$("#div").slideDown(); //设置下拉动画
+						$(".at_least").hide();
+						$(".check_text").hide();
+
+					} else {
+						$("#tan").text("▲");
+						$("#div").slideUp(400, function() {
+
+							$(".at_least").show();
+							$(".check_text").show();
+
+						}); //设置上拉动画
+
+					}
+				}
+			})
+			var i = 0;
+            var cc=[];
+			function change(e,id) { //把内容写入输入的div中
+
+				var a = $(e).text();
+				$("#content").text(a);
+				
+				if($("#div").css("display") !== "none") {
+					$(".at_least").hide();
+					$("#div").slideUp(400, function() {
+
+						$(".at_least").show();
+						var context = $(".check_text").html()
+//						if(context.indexOf(a) >= 0)
+						if(cc.includes(id)){
+							alert("不能选择重复的数据")
+						} else {
+							$(".check_text").append(a + '</br>');
+							i++;
+							console.log(i)
+							console.log(typeof $(".check_text").html())
+							cc.push(id)
+				            console.log(cc)
+						}
+						$(".check_text").show();
+					});
+					$("#tan").text("▲");
+
+				}
+
+			}
+			//下拉框end
+			function analysis(){
+			
+				if(cc.length<2){
+					
+					alert("至少添加两份数据")
+					
+				}else{
+					
+					 location.href="gene_analysis.html?q="+cc
+					
+				}
+				
+				
+			}
+			
+			
+			
+		</script>
+
+	</body>
+
+</html>

@@ -7,28 +7,23 @@
 		<title></title>
 		<link rel="stylesheet" href="../../css/public/public_head.css">
 		<link rel="stylesheet" href="../../css/public/public.css" />
-		<link rel="stylesheet" href="../../css/home/bianji.css" />
+		<link rel="stylesheet" href="../../css/home/sousuo.css" />
 		<script src="../../js/public/rem.js"></script>
 	</head>
-
 	<body>
 		<div>
 			<!--public head-->
 			<div class="lb_headWrap">
 				<p class="lb_headWrap_return" data-num="1">
 					<img class="lb_headWrap_return_img" src="../../img/public/back@2x.png" onclick="returnFun()" />
-					<span class="lb_headWrap_return_img22" style="display: none;">取消</span>
-					
+					<span class="lb_headWrap_return_img22" style="display: none;">取消</span>					
 				</p>
 				<span>基因数据</span>
-				    <p class="lb_headWrap_text lb_header_righticon">删除</p>
+				    <!--<p class="lb_headWrap_text lb_header_righticon">编辑</p>-->
 				    <p class="lb_headWrap_text lb_header_righticon22">编辑</p>
 			</div>
-
 			<div class="liebiao_ear">
-
 				<ul>
-
 					<li id="li1" >
 						<span class="span_left" >0119-29Y&nbsp;&nbsp;张李兴-基因数据1</span>
 						<p class="fist">
@@ -64,23 +59,13 @@
 							<!--<span class="span_right22"><img src="../../img/example/youjian@2x.png"/></span>-->
 						</p>
 					</li>
-
 				</ul>
-
 			</div>
-
-			<div class="tip_ear">
+			<!--<div class="tip_ear">
 				<p class="tip">您的基因检测结果尚未生成</p>
 				<p class="tip">请在PC上登录网站，上传您的基因数据</p>
-			</div>
-			
-			
-			
-			<div class="gene_chaxun" onclick="window.location.href='gene_query.html'">基因查询</div>
-			<div class="shaixuan" onclick="window.location.href='shaixuan.html'">基因筛选</div>
-			
-			
-
+			</div>-->
+			<div class="gene_fengxi" onclick="window.location.href='result.html'">基因分析</div>
 		</div>
 		<script src="../../js/public/jquery-1.8.3.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript" src="../../js/public/public.js"></script>
@@ -105,22 +90,17 @@
 			})
 			
           //删除功能
-			$(".lb_header_righticon").click(function() {
+			$(".gene_fengxi").click(function() {
 				$(".liebiao_ear ul li").each(function(index) {
 
 					var _this = $(this)
 					if(_this.hasClass("selected")) {
 
 						console.log($(this).attr('id'))
-						_this.remove();
-
+					
 					}
 				})
-				if($(".liebiao_ear ul li").length == 0) {
-					$(".liebiao_ear").hide()
-					$(".tip_ear").css({"margin-top":"1rem"});
-					
-				}
+				
 		
 			})
 			
@@ -129,8 +109,6 @@
 				
 				$(".span_right").show();
 				$(".span_right22").hide();
-				$(".lb_header_righticon22").hide();
-				$(".lb_header_righticon").show();
 				$(".tip_ear").show();
 				$(".lb_headWrap_return_img22").show()
 				$(".lb_headWrap_return_img").hide()
@@ -142,33 +120,11 @@
 				
 				$(".span_right").hide();
 				$(".span_right22").show();		
-				$(".lb_header_righticon22").show();
-				$(".lb_header_righticon").hide();
-//				$(".tip_ear").hide();
 				$(".lb_headWrap_return_img22").hide()
 				$(".lb_headWrap_return_img").show()
 		
 			})
-			
-            //点击li页面跳转
-//			$(".liebiao_ear ul li").click(function(){
-//				
-//				if($(".span_right").css('display')=="none"){
-//					
-//					$(location).attr('href',"genequery.html");
-//	
-//				}
-//			
-//			})
-			
-			
-			
-			
-			
-			
-			
-			
-			
+	
 		</script>
 
 	</body>
