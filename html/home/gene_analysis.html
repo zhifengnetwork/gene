@@ -4,306 +4,71 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
-		<title>结果报告</title>
-		<script type="text/javascript" src="../../js/public/rem.js"></script>
-		<link rel="stylesheet" type="text/css" href="../../css/public/public.css" />
-		<link rel="stylesheet" type="text/css" href="../../css/public/public_head.css" />
-		<link rel="stylesheet" href="../../css/home/gene_analysis.css" />
-		<link rel="stylesheet" href="../../css/public/swiper.css" />
+		<title></title>
+		<link rel="stylesheet" href="../../css/public/public_head.css">
+		<link rel="stylesheet" href="../../css/public/public.css" />
+		<link rel="stylesheet" href="../../css/home/result.css" />
+		<script src="../../js/public/rem.js"></script>
 	</head>
 
 	<body>
-
-		<div class="wrap_frame">
+		<div>
 			<!--public head-->
 			<div class="lb_headWrap">
-				<p class="lb_headWrap_return" data-num="1" onclick="returnFun()">
-					<img class="lb_headWrap_return_img" src="../../img/public/bottom_nav/back@2x.png" />
+				<p class="lb_headWrap_return" data-num="1">
+					<img class="lb_headWrap_return_img" src="../../img/public/back@2x.png" onclick="returnFun()" />
+
 				</p>
-				<!---->
-				<span>同位点基因查询</span>
+				<span>基因分析结果</span>
+				<!--<p class="lb_headWrap_text lb_header_righticon">编辑</p>-->
+				<!--<p class="lb_headWrap_text lb_header_righticon22">编辑</p>-->
 			</div>
-
-			<div class="zuidadiv">
-				<!--title-->
-
-				<!-- Swiper -->
-				<div class="swiper-container">
-					<div class="swiper-wrapper">
-						<!--第一屏-->
-						<div class="swiper-slide">
-							<div>
-								<!--表头-->
-								<p class="table_header">A和B</p>
-								<!--表格-->
-								<table frame="void" rules="all" class="biaogege">
-									<tr style="height:.9rem">
-										<td style="text-align: center;">基因座</td>
-										<td>每个基因的基因座传递次数</td>
-									</tr>
-									<tr>
-										<td>DYS458</td>
-										<td>19</td>
-									</tr>
-									<tr>
-										<td>DYS458</td>
-										<td>19</td>
-									</tr>
-									<tr>
-										<td>DYS458</td>
-										<td>19</td>
-									</tr>
-									<tr>
-										<td>DYS458</td>
-										<td>19</td>
-									</tr>
-									<tr>
-										<td>DYS458</td>
-										<td>19</td>
-									</tr>
-									<tr>
-										<td>DYS458</td>
-										<td>19</td>
-									</tr>
-									<tr>
-										<td>DYS458</td>
-										<td>19</td>
-									</tr>
-									<tr>
-										<td>DYS458</td>
-										<td>19</td>
-									</tr>
-									<tr>
-										<td>DYS458</td>
-										<td>19</td>
-									</tr>
-									<tr>
-										<td>DYS458</td>
-										<td>19</td>
-									</tr>
-									<tr>
-										<td></td>
-										<td></td>
-									</tr>
-									<tr>
-										<td></td>
-										<td></td>
-									</tr>
-									<tr>
-										<td></td>
-										<td></td>
-									</tr>
-
-								</table>
-							</div>
-
-						</div>
-						<!--第二屏表格-->
-						<div class="swiper-slide">
-							
-							<!--表头-->
-								<p class="table_header">C和D</p>
-								<!--表格-->
-								<table frame="void" rules="all" class="biaogege">
-									<tr style="height:.9rem">
-										<td style="text-align: center;">基因座</td>
-										<td>每个基因的基因座传递次数</td>
-									</tr>
-									<tr>
-										<td>DYS458</td>
-										<td>19</td>
-									</tr>
-									<tr>
-										<td>DYS458</td>
-										<td>19</td>
-									</tr>
-									<tr>
-										<td>DYS458</td>
-										<td>19</td>
-									</tr>
-									<tr>
-										<td>DYS458</td>
-										<td>19</td>
-									</tr>
-									<tr>
-										<td>DYS458</td>
-										<td>19</td>
-									</tr>
-									<tr>
-										<td>DYS458</td>
-										<td>19</td>
-									</tr>
-									<tr>
-										<td>DYS458</td>
-										<td>19</td>
-									</tr>
-									<tr>
-										<td>DYS458</td>
-										<td>19</td>
-									</tr>
-									<tr>
-										<td>DYS458</td>
-										<td>19</td>
-									</tr>
-									<tr>
-										<td>DYS458</td>
-										<td>19</td>
-									</tr>
-									<tr>
-										<td></td>
-										<td></td>
-									</tr>
-									<tr>
-										<td></td>
-										<td></td>
-									</tr>
-									<tr>
-										<td></td>
-										<td></td>
-									</tr>
-
-								</table>
-				
-						</div>
-
-					</div>
-				</div>
-
-				<!--<table frame="void" rules="all" class="biaogege2">
-					<tr style="height:.9rem">
-						<td></td>
-						<td style="text-align: center;">平均传递次数</td>
-						<td>共祖年代数</td>
+			<!--表格-->
+		<div>
+			<table frame="void" rules="all" class="biaogege">
+				<tr style="height:.9rem">
+					<td style="text-align: center;">编号</td>
+					<td>民族</td>
+					<td style="text-align: center;">地域</td>
+					<td>共同祖代</td>
+				</tr>
+			</table>
+			<table frame="void" rules="all" class="biaogege2">
+				<tbody>
+					<tr>
+						<td>001</td>
+						<td>汉族</td>
+						<td>广东</td>
+						<td rowspan='2'>100</td>
 					</tr>
 					<tr>
-						<td>A和B</td>
-						<td>78</td>
-						<td>19</td>
+						<td>002</td>
+						<td>汉族</td>
+						<td>北京</td>
 					</tr>
-					
+				</tbody>
+			</table>
+			<table frame="void" rules="all" class="biaogege2">
+				<tbody>
 					<tr>
-						<td>B和C</td>
-						<td>89</td>
-						<td>19</td>
-					</tr>
-					<tr>
-						<td>C和A</td>
-						<td>89</td>
-						<td>19</td>
-					</tr>
-					<tr>
-						<td></td>
-						<td></td>
-						<td></td>
+						<td>012</td>
+						<td>汉族</td>
+						<td>广东</td>
+						<td rowspan='2'>200</td>
 					</tr>
 					<tr>
-						<td></td>
-						<td></td>
-						<td></td>
+						<td>013</td>
+						<td>汉族</td>
+						<td>湖南</td>
 					</tr>
-					<tr>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-
-				</table>-->
-				
-				<!--第二个表格-->
-				<div class="l3h5">
-					<div>
-						<ul class="xiala">
-							<li class="xiala_name"><span class="first">A244</span><span class="he">和</span><span class="second">B888</span></li>
-							<li>78</li>
-							<li>89</li>
-						</ul>
-						<div style="text-align: left;" class="xiala_text">
-							
-							<p class="fuzhi_first">33dd33</p>
-							<p class="fuzhi_second">24444</p>
-							
-						</div>
-					</div>	
-					
-					<div>
-						<ul class="xiala">
-							<li class="xiala_name"><span class="first">C223</span><span class="he">和</span><span class="second">D789</span></li>
-							<li>78</li>
-							<li>89</li>
-						</ul>
-						<div style="text-align: left;" class="xiala_text">
-							
-							<p class="fuzhi_first">33ss4433</p>
-							<p class="fuzhi_second">29</p>
-							
-						</div>
-					</div>	
-					
-					<div>
-						<ul class="xiala">
-							<li class="xiala_name"><span class="first">E345</span><span class="he">和</span><span class="second">A667</span></li>
-							<li>78</li>
-							<li>89</li>
-						</ul>
-						<div style="text-align: left;" class="xiala_text">
-							
-							<p class="fuzhi_first">333d3</p>
-							<p class="fuzhi_second">2cc</p>
-							
-						</div>
-					</div>	
-		        </div>
-	  
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-
-			</div>
+				</tbody>
+			</table>
+		</div>		
 
 		</div>
-
-		<script src="../../js/public/jquery-1.8.3.js"></script>
-		<script src="../../js/public/swiper.js"></script>
-		<script src="../../js/public/public.js"></script>
+		<script src="../../js/public/jquery-1.8.3.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../../js/public/public.js"></script>
 		<script>
-			var swiper = new Swiper('.swiper-container');
-			$(".xiala").click(function(){
-				
-				if($(this).parent().find('.xiala_text').is(':visible')){
-					
-					$(this).parent().find('.xiala_text').hide();
-				}else{
-					
-					$(this).parent().find('.xiala_text').show();
-				}
-				
-				console.log($(this).find('.first').text())
-				first_text=$(this).find('.first').text()
-				second_text=$(this).find('.second').text()
-				$(this).parent().find('.xiala_text').find(".fuzhi_first").html(first_text)
-				$(this).parent().find('.xiala_text').find(".fuzhi_second").html(second_text)
-				
-				
-				
-				
-			})
-			
-			
-			
 		</script>
 
 	</body>
