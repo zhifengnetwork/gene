@@ -1,31 +1,84 @@
 .biaogege{
-	
-	
 	width: 88%;
 	margin: 1.5rem auto 0 auto;
 	border: .01rem solid #37afe6;
-	
-
 }
 .biaogege2{
 	
 	width: 88%;
 	margin: .3rem auto;
 	border: .01rem solid #37afe6;
-	
 }
+
 tr{
 	
 	height: .7rem;
 	line-height: .7rem;
 	font-size: .25rem;
 	text-align: center;
-	
-	
 }
 tr td{
-
-   width:25%;
+   width:16.6666%;
+}
+.niandai{
+	line-height: .3rem;
+}
+.muqian{
+	
+	text-align: center;
+	width: 88%;
+	height: .6rem;
+	line-height: .6rem;
+	margin: 0 auto;
+	line-height: ;
+	background:#37afe6;
+	color: white;
+}
+.table_ear1 table{
+	
+	margin:1.5rem auto 0 auto;
+	color: black;
+	
+}
+.table_ear table:nth-child(2){
+	color: black;	
+}
+.wu{
+	
+	display: none;
+	margin: 0 auto;
+	background:#37afe6;
+	color: white;
+}
+.kong_ear{
+	position: relative;
+}
+.kong_pic{
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 1.3rem;
+	margin: 0 auto;	
+}
+.wu_pipei{
+	
+	display: none;
+	
+}
+.wu_pipei p{
+	width: 88%;
+	margin: 0 auto;
+	padding-top: 1.5rem;
+	
+}
+.wu_pipei span{
+	
+	display: inline-block;
+	width: 88%;
+	color:gray;
+	text-align: center;
+	padding-top: .25rem;
 	
 	
 }
