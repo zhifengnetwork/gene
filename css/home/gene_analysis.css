@@ -43,7 +43,7 @@ tr td{
 }
 .table_ear1 table{
 	
-	margin:1.1rem auto 0 auto;
+	margin:1.5rem auto 0 auto;
 	color: black;
 	
 }
@@ -138,6 +138,11 @@ tr td{
 }
 .font_color{
 	color: red;
+	
+}
+.biaogege2:last-child{
+	
+	margin-bottom: 1rem;
 	
 }
 
