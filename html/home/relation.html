@@ -18,33 +18,139 @@
 				<p class="lb_headWrap_return" data-num="1" onclick="returnFun()">
 					<img class="lb_headWrap_return_img" src="../../img/public/bottom_nav/back@2x.png" />
 				</p>
-				<span>基因关系</span>
+				<span>上传数据</span>
 			</div>
-			<div class="inner">
-				<!--大图-->
-				<p class="ckg">
-					<img src="../../img/home/jiyinguanshi.png" />
-				</p>
-				<!--小图标-->
-				<p class="smallicon">
-					<img src="../../img/home/family@2x.png" />
-				</p>
-				<!--文字部分-->
-				<div class="text">
-					<!--标题-->
-					<h2>一个家族遗产网络</h2>
-
-					<p>我们的DNA传承自我们的祖先。拥有相同祖先的个体体内存在着相同的DNA片段，也就是「DNA 亲属」。</p>
-					<p>通过大数据比对，每一个23魔方用户平均可以找到4.5位DNA亲属。你可以在23魔方查看这些DNA亲属的地域和民族血统分布、探究你们共同的父系和母系迁徙路径，甚至可以与他们取得联络，共同追溯血缘历史。</p>
-					<p>随着更多的人完成基因检测，这个基于DNA的网络将愈发细密庞大，人与人之间的链接，又有了一个全新的维度。</p>
-
-				</div>
-
-			</div>
-		</div>
+			<!--表格-->
+			
+         
+                <p class="tip">
+                	填写说明:请认真填写并且检查数据信息。当一个基因座有两个数值时在基因座后加a，b，l，ll区分，如DYS385(15，18)，DYS385a:15/DYS385b:18，表格里没有相应基因座的可以再基因座最下方添加，没有的信息可不填，从B列开始填写，切勿修改表里的基本样式，后果自负 	
+                </p>
+                
+                <!--填写信息-->
+                <p class="person_message">
+                	<label>姓名:</label>
+                	<span><input type="text"/></span>
+                </p>
+                <p class="person_message">
+                	<label>名族:</label>
+                	<span><input type="text"/></span>
+                </p>
+                <p class="person_message">
+                	<label>现今地址:</label>
+                	<span><input type="text"/></span>
+                </p>
+                <p class="person_message">
+                	<label>所属单倍群:</label>
+                	<span><input type="text"/></span>
+                </p>
+                <p class="person_message">
+                	<label>SNP:</label>
+                	<span><input type="text"/></span>
+                </p>
+                <p class="person_message">
+                	<label>SNP excepted:</label>
+                	<span><input type="text"/></span>
+                </p>
+                <p class="person_message">
+                	<label>联系方式:</label>
+                	<span><input type="text"/></span>
+                </p>
+                <p class="person_message">
+                	<label>迁移记录:</label>
+                	<span><input type="text"/></span>
+                </p>
+                <p class="person_message">
+                	<label>其他说明:</label>
+                	<span><input type="text"/></span>
+                </p>
+              
+                 <div class="l3h51" >
+					<div class="l3h5d1" >
+						<ul class="xiala" style="margin-bottom:0rem">
+							
+							<li>基因座/样本号</li>
+							<li>基因座/样本号</li>
+							<li>基因座/样本号</li>
+							
+						</ul>
+				    </div>
+				</div>  			
+                 <div class="l3h51" style="margin-top: -.1rem;">
+					<div class="l3h5d1">
+						
+						<ul class="xiala">
+							
+							<li>DYS19</li>
+							<li>DYS3952</li>
+							<li>DYS389b</li>
+							
+						</ul>
+						<ul class="xiala">
+							<li><input type="text" value=""/></li>
+							<li><input type="text" /></li>
+							<li><input type="text" /></li>
+						</ul>
+						<ul class="xiala">
+							
+							<li>DYS19</li>
+							<li>DYS3952</li>
+							<li>DYS389b</li>
+						</ul>
+						<ul class="xiala">
+							<li><input type="text" value=""/></li>
+							<li><input type="text" /></li>
+							<li><input type="text" /></li>
+						</ul>
+						<ul class="xiala">
+							
+							<li>DYS19</li>
+							<li>DYS3952</li>
+							<li>DYS389b</li>
+							
+						</ul>
+						<ul class="xiala">
+							<li><input type="text" value=""/></li>
+							<li><input type="text" /></li>
+							<li><input type="text" /></li>
+						</ul>
+					</div>
+		       </div>
+          </div> 
+          <p class="save">提交保存</p>
+		
+	
 
 		<script type="text/javascript" src="../../js/public/jquery-1.8.3.js"></script>
 		<script type="text/javascript" src="../../js/public/public.js"></script>
+		<script>
+		var myfile = document.getElementById('myfile');
+    	var check_zip=document.getElementsByClassName("check_zip")
+    	$(function(){
+			$("#date").selectDate()
+			
+			$("#days").focusout(function(){
+				var year = $("#year option:selected").html()
+				var month = $("#month option:selected").html()
+				var day = $("#days option:selected").html()
+				console.log(year+month+day)
+			})
+			
+        })
+    	
+    	
+    	$(".add").click(function(){
+    		
+    		
+    		$(".l3h5d").append('<ul class="xiala"><li><input type="text"/></li><li><input type="text"/></li><li><input type="text"/></li></ul>')
+    		
+    		
+    		
+    	})
+    	
+			
+			
+		</script>
 	</body>
 
 </html>
